@@ -1,0 +1,3479 @@
+{
+  "schemaVersion": 1,
+  "corpusSha256": "61827bb17127b1c931f05d436b72984818636150e8d0a9c1cdf5cec678b99df6",
+  "profiles": {
+    "24.19.0": {
+      "runtimeVersions": {
+        "node": "24.19.0",
+        "ada": "3.4.4",
+        "icu": "78.3",
+        "unicode": "17.0"
+      }
+    },
+    "24.21.0": {
+      "runtimeVersions": {
+        "node": "24.21.0",
+        "ada": "4.0.0",
+        "icu": "78.3",
+        "unicode": "17.0"
+      }
+    }
+  },
+  "cases": [
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u4f8b\u3048.\u30c6\u30b9\u30c8/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--r8jz45g.xn--zckzah/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--r8jz45g.xn--zckzah/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://fa\u00df.de/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--fa-hia.de/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--fa-hia.de/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u03b2\u03cc\u03bb\u03bf\u03c2.gr/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--nxasmm1c.gr/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--nxasmm1c.gr/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u03c2.gr/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--3xa.gr/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--3xa.gr/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u03c3.gr/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--4xa.gr/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--4xa.gr/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u2603.net/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--n3h.net/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--n3h.net/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\ud83d\ude00.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--e28h.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--e28h.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://a\u200cb.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://a\u200db.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://a\u3002b/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://a.b/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://a.b/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u00e9.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--9ca.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--9ca.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\uff45\uff58\uff41\uff4d\uff50\uff4c\uff45.com/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u00ad.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u1e9e.de/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--zca.de/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--zca.de/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\ud801\udc00.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--hj8c.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--hj8c.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u0600.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--a/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--a/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--abc/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--abc/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--abc-/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--abc-/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--a-ecp.ru/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--a-ecp.ru/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--fa-hia.de/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--fa-hia.de/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--fa-hia.de/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--e28h.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--e28h.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--e28h.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--0.pt/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--0.pt/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--bcher-kva.de/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--bcher-kva.de/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--bcher-kva.de/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--a.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--a.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--a_.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--a_.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--%61.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_DIGITAL_LINK_INVALID_URI",
+                "reason": "invalid-uri",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "absolute http or https URL",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--a.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--ls8h.test/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--ls8h.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--ls8h.test/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--3xa.gr/01/04912345678904",
+        "category": "idna"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--3xa.gr/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://xn--3xa.gr/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/.",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_INVALID_INPUT",
+                "reason": "malformed-path",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "Digital Link path containing primary AI and AI/value pairs",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_INVALID_INPUT",
+                "reason": "malformed-path",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "Digital Link path containing primary AI and AI/value pairs",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/./21/S",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_INVALID_INPUT",
+                "reason": "malformed-path",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "Digital Link path containing primary AI and AI/value pairs",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_INVALID_INPUT",
+                "reason": "malformed-path",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "Digital Link path containing primary AI and AI/value pairs",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=.",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                "."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                "."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                "."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                "."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": "."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          }
+        },
+        "24.21.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/..",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/../21/S",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/21/S"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/21/S"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=..",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": ".."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/"
+          }
+        },
+        "24.21.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/"
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2e",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_INVALID_INPUT",
+                "reason": "malformed-path",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "Digital Link path containing primary AI and AI/value pairs",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_INVALID_INPUT",
+                "reason": "malformed-path",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "Digital Link path containing primary AI and AI/value pairs",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2e/21/S",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_INVALID_INPUT",
+                "reason": "malformed-path",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "Digital Link path containing primary AI and AI/value pairs",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "normalize": {
+            "ok": false,
+            "code": "INVALID_GS1"
+          },
+          "validate": {
+            "ok": false,
+            "errors": [
+              {
+                "code": "GS1_INVALID_INPUT",
+                "reason": "malformed-path",
+                "ai": null,
+                "value": null,
+                "key": null,
+                "offset": null,
+                "elementIndex": null,
+                "expected": "Digital Link path containing primary AI and AI/value pairs",
+                "count": null
+              }
+            ],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=%2e",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                "."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                "."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                "."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                "."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": "."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          }
+        },
+        "24.21.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2E.",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2E./21/S",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/21/S"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/21/S"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=%2E.",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": "."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          }
+        },
+        "24.21.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/.%2E",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/.%2E/21/S",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/21/S"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/21/S"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=.%2E",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": "."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          }
+        },
+        "24.21.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2e%2e",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2e%2e/21/S",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/21/S"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "21",
+                "S"
+              ]
+            ],
+            "query": [],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/21/S"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=%2e%2e",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        },
+        "24.21.0": {
+          "parse": {
+            "ok": true,
+            "elements": [
+              [
+                "01",
+                "04912345678904"
+              ],
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "path": [
+              [
+                "01",
+                "04912345678904"
+              ]
+            ],
+            "query": [
+              [
+                "10",
+                ".."
+              ]
+            ],
+            "unknown": []
+          },
+          "normalize": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/"
+          },
+          "validate": {
+            "ok": true,
+            "errors": [],
+            "warnings": []
+          }
+        }
+      }
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": "."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "reference": {
+        "24.19.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          }
+        },
+        "24.21.0": {
+          "create": {
+            "ok": true,
+            "value": "https://example.com/01/04912345678904/10/"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+/artifacts/
+/.tools/
+/.baseline/
+/hello.png
+/specqr
+/specqr.exe
+*.test
+*.out
+__pycache__/
+node_modules/

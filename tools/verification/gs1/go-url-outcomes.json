@@ -1,0 +1,2079 @@
+{
+  "schemaVersion": 1,
+  "reviewStatus": "reviewed",
+  "policy": "Finite independently constructed expected Go outcomes: explicit conservative Unicode15 host profile, Python standard-library RFC3492 calculation, canonical ACE rejection reasons, lossless GS1 dot data and strict Unicode input domain. No candidate output or earlier-language subject is read. All other corpus outcomes must equal the live pinned JavaScript reference.",
+  "cases": [
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u4f8b\u3048.\u30c6\u30b9\u30c8/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--r8jz45g.xn--zckzah/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://fa\u00df.de/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--fa-hia.de/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u03b2\u03cc\u03bb\u03bf\u03c2.gr/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--nxasmm1c.gr/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u03c2.gr/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--3xa.gr/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u03c3.gr/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--4xa.gr/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u2603.net/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--n3h.net/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\ud83d\ude00.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--e28h.test/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://a\u200cb.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "Forbidden joiner or format scalar is rejected by the bounded Unicode 15.0 profile."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://a\u200db.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "Forbidden joiner or format scalar is rejected by the bounded Unicode 15.0 profile."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://a\u3002b/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://a.b/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u00e9.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--9ca.test/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\uff45\uff58\uff41\uff4d\uff50\uff4c\uff45.com/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u00ad.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://.test/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u1e9e.de/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--zca.de/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\ud801\udc00.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--hj8c.test/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://\u0600.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "Forbidden joiner or format scalar is rejected by the bounded Unicode 15.0 profile."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--a/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "ACE decodes to U+0080 control. Bounded Go profile rejects this independently reviewed case."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "Empty ACE payload. Bounded Go profile rejects this independently reviewed case."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--abc/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "ACE decodes to forbidden control scalars. Bounded Go profile rejects this independently reviewed case."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--abc-/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "Noncanonical all-ASCII ACE result. Bounded Go profile rejects this independently reviewed case."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--a-ecp.ru/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "ACE includes U+2488, rejected by the frozen compatibility-unstable profile. Bounded Go profile rejects this independently reviewed case."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--fa-hia.de/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--fa-hia.de/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--e28h.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--e28h.test/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--0.pt/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "Truncated RFC3492 digit sequence. Bounded Go profile rejects this independently reviewed case."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--bcher-kva.de/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--bcher-kva.de/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--a.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "ACE decodes to U+0080 control. Bounded Go profile rejects this independently reviewed case."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--a_.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "Underscore is not an RFC3492 encoded digit. Bounded Go profile rejects this independently reviewed case."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--%61.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "normalize": {
+          "ok": false,
+          "code": "INVALID_GS1"
+        },
+        "validate": {
+          "ok": false,
+          "errors": [
+            {
+              "code": "GS1_DIGITAL_LINK_INVALID_URI",
+              "reason": "invalid-uri",
+              "ai": null,
+              "value": null,
+              "key": null,
+              "offset": null,
+              "elementIndex": null,
+              "expected": "absolute http or https URL",
+              "count": null
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "reason": "Percent-decoded ACE decodes to U+0080 control. Bounded Go profile rejects this independently reviewed case."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--ls8h.test/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--ls8h.test/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://xn--3xa.gr/01/04912345678904",
+        "category": "idna"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://xn--3xa.gr/01/04912345678904"
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Explicit dot/fullwidth/soft-hyphen mapping, Unicode 15 lowercase and independent Python stdlib RFC3492 encoding. Existing canonical ACE labels are unchanged."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/.",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              "."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              "."
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/./21/S",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              "."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              "."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904/21/S?10=."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=.",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              "."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [
+            [
+              "10",
+              "."
+            ]
+          ],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": "."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "go": {
+        "create": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=."
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/..",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/../21/S",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904/21/S?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=..",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": ".."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "go": {
+        "create": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=.."
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2e",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              "."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              "."
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2e/21/S",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              "."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              "."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904/21/S?10=."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=%2e",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              "."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [
+            [
+              "10",
+              "."
+            ]
+          ],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": "."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "go": {
+        "create": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=."
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2E.",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2E./21/S",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904/21/S?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=%2E.",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": "."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "go": {
+        "create": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=."
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/.%2E",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/.%2E/21/S",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904/21/S?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=.%2E",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": "."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "go": {
+        "create": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=."
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2e%2e",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904/10/%2e%2e/21/S",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ],
+            [
+              "21",
+              "S"
+            ]
+          ],
+          "query": [],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904/21/S?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?10=%2e%2e",
+        "category": "dot"
+      },
+      "go": {
+        "parse": {
+          "ok": true,
+          "elements": [
+            [
+              "01",
+              "04912345678904"
+            ],
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "path": [
+            [
+              "01",
+              "04912345678904"
+            ]
+          ],
+          "query": [
+            [
+              "10",
+              ".."
+            ]
+          ],
+          "unknown": []
+        },
+        "normalize": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=.."
+        },
+        "validate": {
+          "ok": true,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "create",
+        "elements": [
+          {
+            "ai": "01",
+            "value": "04912345678904"
+          },
+          {
+            "ai": "10",
+            "value": "."
+          }
+        ],
+        "baseUrl": "https://example.com",
+        "category": "dot"
+      },
+      "go": {
+        "create": {
+          "ok": true,
+          "value": "https://example.com/01/04912345678904?10=."
+        }
+      },
+      "reason": "Lossless GS1 dot-only values remain data elements; canonical creation emits them in the query to avoid URL path traversal normalization."
+    },
+    {
+      "case": {
+        "command": "url",
+        "input": "https://example.com/01/04912345678904?x=\ud800",
+        "category": "ordinary"
+      },
+      "go": {
+        "error": "SpecQrError",
+        "message": "Unpaired UTF-16 surrogate",
+        "isSpecQRError": true,
+        "code": "INVALID_INPUT"
+      },
+      "reason": "Strict development JSON boundary rejects unpaired UTF-16 instead of encoding/json replacement. Go string API accepts only valid UTF-8."
+    }
+  ]
+}

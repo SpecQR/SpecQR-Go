@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "asOfUTC": "2026-10-04",
+  "status": "prepublication-reviewed-with-explicit-32bit-unoptimized-runtime-limitation",
+  "publicationStatus": "Prepublication evidence snapshot; initial source publication accepted with the explicit limitations below. Public exact-commit CI and fetch verification remain separate.",
+  "goVersions": [
+    "1.26.8",
+    "1.27.1"
+  ],
+  "minimumGo": "1.26.8",
+  "sourceIdentity": {
+    "manifestAlgorithm": "SHA256 of sorted compact JSON mapping all Go filenames and go.mod to SHA256",
+    "currentFingerprint": "752ed151c2f95eea6836432e12dd4c72c544ef87bcf235c0f4a74909efb13266",
+    "originalFingerprint": "af5539ed5e47abd6d436960fe887f44d9344f884f467efb479f3314777c221ce",
+    "changedFilesFromOriginal": [
+      "api_test.go"
+    ],
+    "productionModuleAndToolingUnchanged": true,
+    "testDelta": "Separate raster limits from SVG int64 boundary expectations; add a valid large SVG assertion. Independently reviewed; corrected Linux and Windows test suites passed.",
+    "documentationDelta": "Platform status documents were updated after native receipts. Historical source-archive hashes continue to identify the tested archives; they do not claim to cover these later documentation-only edits.",
+    "files": {
+      "api.go": "b3445acf8ba582d597a6556a68958965cdf816d2661187991360c31d85482781",
+      "api_test.go": "9b2ba4510043402de5899adf6490624b27b13992a04d62439f008ef52084267d",
+      "cmd/specqr/main.go": "35b473420ec938262cdc30b4a7e04174832b839c25d79d3659da903ae3297c1c",
+      "cmd/specqr/main_test.go": "48c2c8fd945dc39685e22f8e30a92fec00eeaf862e8d3b1c19070491fd5cdd00",
+      "core.go": "8ba53ccaf0647bc2d837611ddb864442c9b858b97a9ab0531ccd549b49e5665a",
+      "core_test.go": "1d8991121e16673310c521275fbfe2fcd25ce2be66ffd145fc1c5a158ea4da0b",
+      "diagnostics.go": "6e69afd570a286a664af5551b57f515363aa2830553be93b12b6a9c96f3e25fa",
+      "doc.go": "9a38e132bf9a4bc10090788b8fd37754f5fcc26b06b8ca2116ed86d110eea1ea",
+      "error.go": "67d3cbb42b9a0561961f56cd31ba820c07a61f4d1cac7f4a4444a7e92cd656b1",
+      "example_test.go": "f7372717226ba7084e52ad29ab4730ee4e645d0f1ae41190b4ade4e44c6d0830",
+      "examples/basic/main.go": "378b4e2e33d3428fefb9b4ee80efe1a737708d0d4142f9bcb00fd4253e8b459f",
+      "go.mod": "0cf58e7df4d2d858ffd22011c58366dbc0f03d13e7a35f62de0b4688241ed15d",
+      "gs1.go": "d4f55893ff31791e9a768f68420e0608057aec36f32212a118679a308ec060b8",
+      "gs1_test.go": "dd703a829ce8a229832c289a6e0378317a2ee7f98da9bbb8460bcd0cacacc227",
+      "idna_table.go": "5d32911bc45df2306564295e0995458cd7f97b21311404120de4da06a7fe9603",
+      "kanji.go": "b21e59c4a0e38660a8ad08e4bcae12bb2b2988b4e8e6624d9718af37c5e802af",
+      "kanji_test.go": "00ccfc37c9ac62e6eb268d566a621d016a78ae5710745bcb203f8c6fa0d71438",
+      "render.go": "0c0c588bcd5deefa7d953b946e4cdf16ebb0a234220650639d4a87583599dafe",
+      "segment.go": "658e13ddc4af6528ee5bd458def4b522aac788c24dd0fcd26629be855cffeb4f",
+      "segment_test.go": "e8f798b75e27d31407cb9202006523af08ae897621fc89a701ef306a51b6f30e",
+      "structured_append.go": "34e18ad9621e26fbddb7f2355cffb00e3b309787813774ab2e75c1fff96421b8",
+      "structured_append_test.go": "be776e5b49d44cc7b413ed395966ca737e1116e508717e35fa2a0e188fc095e8",
+      "tables.go": "9a008988301374cfabf74b03a538e00d316c4c06942542612f58f1a1fed3ec63",
+      "tables_test.go": "0763d741b3d5905046da376750abc90e73a7a3ab6bdc2eada6209fdc3d420464",
+      "tools/conformance/main.go": "9d8be36dc65c34f337441249a46755571d458ccacadfefbae3fe26e01281cdd0",
+      "tools/conformance/main_test.go": "28fb393176c8c1471e35b571d0c1af1e24af93ae6d2f7858b2feb97bae3c088c",
+      "url.go": "88a5b8acfe22e836f6b9675fb337f89171394b8552663b8e41b1ce90008ee322",
+      "url_test.go": "1045e848a79da61da103018725dd64dd49cec580d19cc170e5f1d4fdb507e814"
+    }
+  },
+  "platforms": {
+    "linuxAMD64": {
+      "status": "passed",
+      "receiptSha256": "6d5738032dea6873b8baa54c55d2278666eb13d45950ecfd1f37407f8b0bdd8d",
+      "testedFingerprint": "752ed151c2f95eea6836432e12dd4c72c544ef87bcf235c0f4a74909efb13266",
+      "versions": [
+        {
+          "compiler": {
+            "GOARCH": "amd64",
+            "GOHOSTARCH": "amd64",
+            "GOHOSTOS": "linux",
+            "GOOS": "linux",
+            "GOVERSION": "go1.26.8"
+          },
+          "goExecutableSha256": "d9a2fa19c7ef8b57f420012c21f49f235c46f08a68c12077d9c753dbb6ccdc34",
+          "gates": {
+            "normal": "passed",
+            "debug": "passed",
+            "race": "passed",
+            "vet": "passed",
+            "CGODisabled": "passed",
+            "gofmt": "passed",
+            "packageDocs": "passed",
+            "unicodeGenerator": "passed",
+            "packageCLIConsumerReproducibility": "passed",
+            "exampleExecution": "passed"
+          }
+        },
+        {
+          "compiler": {
+            "GOARCH": "amd64",
+            "GOHOSTARCH": "amd64",
+            "GOHOSTOS": "linux",
+            "GOOS": "linux",
+            "GOVERSION": "go1.27.1"
+          },
+          "goExecutableSha256": "30969f97169d7f43fe6a085873d75613adc21e30818a8c61d95bd27275df4624",
+          "gates": {
+            "normal": "passed",
+            "debug": "passed",
+            "race": "passed",
+            "vet": "passed",
+            "CGODisabled": "passed",
+            "gofmt": "passed",
+            "packageDocs": "passed",
+            "unicodeGenerator": "passed",
+            "packageCLIConsumerReproducibility": "passed",
+            "exampleExecution": "passed"
+          }
+        }
+      ]
+    },
+    "windowsAMD64": {
+      "status": "passed",
+      "receiptSha256": "1a4c2575380ba66a795a97539b2b90c38890b154bc8e8a5137ec251de34b7c88",
+      "testedFingerprint": "752ed151c2f95eea6836432e12dd4c72c544ef87bcf235c0f4a74909efb13266",
+      "versions": [
+        {
+          "compiler": {
+            "GOARCH": "amd64",
+            "GOHOSTARCH": "amd64",
+            "GOHOSTOS": "windows",
+            "GOOS": "windows",
+            "GOVERSION": "go1.26.8"
+          },
+          "goExecutableSha256": "21761eceb9302062c9623fb699f332c8c7fe000f15f70efe8da01a2cfbbc16b9",
+          "gates": {
+            "normal": "passed",
+            "debug": "passed",
+            "race": "passed",
+            "vet": "passed",
+            "CGODisabled": "passed",
+            "gofmt": "passed",
+            "packageDocs": "passed",
+            "unicodeGenerator": "passed",
+            "packageCLIConsumerReproducibility": "passed",
+            "exampleExecution": "passed"
+          }
+        },
+        {
+          "compiler": {
+            "GOARCH": "amd64",
+            "GOHOSTARCH": "amd64",
+            "GOHOSTOS": "windows",
+            "GOOS": "windows",
+            "GOVERSION": "go1.27.1"
+          },
+          "goExecutableSha256": "d3ccdb604eafa6031133aefe1a3db24f0bb7362b857bc2125ac4e4c178b4b490",
+          "gates": {
+            "normal": "passed",
+            "debug": "passed",
+            "race": "passed",
+            "vet": "passed",
+            "CGODisabled": "passed",
+            "gofmt": "passed",
+            "packageDocs": "passed",
+            "unicodeGenerator": "passed",
+            "packageCLIConsumerReproducibility": "passed",
+            "exampleExecution": "passed"
+          }
+        }
+      ],
+      "independentReviewRace": "passed-both-compilers"
+    },
+    "macOSARM64": {
+      "status": "passed-original-snapshot; accepted-for-unchanged-production",
+      "receiptSha256": "aaa733d61d9df5f7a33d248a3d3629c502b9c6eee74a4cb0c2fc0fad459f8045",
+      "testedFingerprint": "af5539ed5e47abd6d436960fe887f44d9344f884f467efb479f3314777c221ce",
+      "versions": [
+        {
+          "compiler": {
+            "GOARCH": "arm64",
+            "GOHOSTARCH": "arm64",
+            "GOHOSTOS": "darwin",
+            "GOOS": "darwin",
+            "GOVERSION": "go1.26.8"
+          },
+          "goExecutableSha256": "2ebc27dd4e38e9b86a9f41df0307785f4f7e2997e4be761a7b4af04b41a0de57",
+          "gates": {
+            "normal": "passed",
+            "debug": "passed",
+            "race": "passed",
+            "vet": "passed",
+            "CGODisabled": "passed",
+            "gofmt": "passed",
+            "packageDocs": "passed",
+            "unicodeGenerator": "passed",
+            "packageCLIConsumerReproducibility": "passed",
+            "exampleExecution": "passed"
+          }
+        },
+        {
+          "compiler": {
+            "GOARCH": "arm64",
+            "GOHOSTARCH": "arm64",
+            "GOHOSTOS": "darwin",
+            "GOOS": "darwin",
+            "GOVERSION": "go1.27.1"
+          },
+          "goExecutableSha256": "132b69336a1f809932a8a20b0201dbbb980e86e3a323ae32e893639d83d71598",
+          "gates": {
+            "normal": "passed",
+            "debug": "passed",
+            "race": "passed",
+            "vet": "passed",
+            "CGODisabled": "passed",
+            "gofmt": "passed",
+            "packageDocs": "passed",
+            "unicodeGenerator": "passed",
+            "packageCLIConsumerReproducibility": "passed",
+            "exampleExecution": "passed"
+          }
+        }
+      ],
+      "finalTestAssertionExecutedOnMac": false,
+      "continuityAssessment": "All production/module/tooling bytes are identical. Reviewed api_test.go-only expectations have no OS-specific dependency. No full Mac rerun is required solely for the changed aggregate test fingerprint."
+    },
+    "windows386": {
+      "status": "candidate-suites-passed-with-separate-unresolved-debug-diagnostics",
+      "host": "Intel Windows AMD64; WOW64 process execution",
+      "suiteCount": 4,
+      "compilers": [
+        "1.26.8",
+        "1.27.1"
+      ],
+      "modes": [
+        "normal",
+        "unoptimized debug"
+      ]
+    },
+    "linux386": {
+      "status": "emulated normal passed; root-package unoptimized debug failed both versions",
+      "crossCompilation": "passed",
+      "emulatedExecution": "completed under verified QEMU10.0.13; see linux386-emulation.json",
+      "nativeExecution": "not run; exec format error on current Linux host",
+      "race": "not supported on linux/386",
+      "normalOptInSkip": "TestGS1URLDifferential requires external Node reference; not run in this emulated lane"
+    }
+  },
+  "independentOracleReruns": {
+    "source": {
+      "status": "passed",
+      "goVersion": "go1.26.8",
+      "candidateBinarySha256": "9520cacd1f96ed68f6fd70f857cf1999ae68021ad1fbe0a6e24151f23bc6a785",
+      "summarySha256": "6c494de59d54f9dee56c70cf834a76ed0c9f68554ca9bef56e91cef0b6f0a4fd",
+      "lanes": {
+        "conformance": "passed",
+        "structured-append": "passed",
+        "jsqr": "passed",
+        "zxing-cpp": "passed",
+        "zxing-java": "passed",
+        "gs1-24.19": "passed",
+        "gs1-24.21": "passed"
+      }
+    },
+    "archive": {
+      "status": "passed",
+      "goVersion": "go1.27.1",
+      "candidateBinarySha256": "a96888014c81f6397ce683de2be88fbbdd4ee65a763ec98710b793ba70874c9f",
+      "summarySha256": "724fca03c7f8e0a37bdec8189cf16df3b15751900229113615b8a505e532829a",
+      "lanes": {
+        "conformance": "passed",
+        "structured-append": "passed",
+        "jsqr": "passed",
+        "zxing-cpp": "passed",
+        "zxing-java": "passed",
+        "gs1-24.19": "passed",
+        "gs1-24.21": "passed"
+      }
+    },
+    "consumer": {
+      "status": "passed",
+      "goVersion": "go1.27.1",
+      "candidateBinarySha256": "0ef2ddb1ca5d8336bb7044bdcdb95df9381877b392414ca4e442c20c4e743125",
+      "summarySha256": "67ff39deb062c3e3a0dddf8d430e1935b55d1e178ffcb5d54b21e735ac0f6afb",
+      "lanes": {
+        "conformance": "passed",
+        "structured-append": "passed",
+        "jsqr": "passed",
+        "zxing-cpp": "passed",
+        "zxing-java": "passed",
+        "gs1-24.19": "passed",
+        "gs1-24.21": "passed"
+      }
+    }
+  },
+  "knownDiagnostics": {
+    "windows386Debug": {
+      "status": "unresolved; failures retained",
+      "intelCandidate": "All eight normal/debug suites for both compilers and AMD64/386 passed; 386 ran under WOW64 on Intel hardware.",
+      "intelStandardLibrary": "Full compress/flate debug passes AMD64 both versions; fails Windows386 both versions. Go1.26.8: nil-pointer in io.ReadAll inside TestBestSpeed. Go1.27.1: GC/sigtramp fatal traceback.",
+      "earlierARM64Guest": "Go1.26.8 Windows386 candidate debug failed through ToPNG -> image/png level9 -> zlib -> flate compressor.deflate under x86 instruction emulation.",
+      "productionRelevance": "Production PNG uses BestCompression and the same flate/runtime. Intel failures do not identify the same cause or prove PNG immunity.",
+      "rootCause": "unassigned",
+      "claimsNotMade": [
+        "ARM-only cause",
+        "fixed by Go1.27.1",
+        "all Windows386 debug workloads pass"
+      ],
+      "controlProvenance": "Four control command records transcribed from producer execution records and cross-checked with retained logs; original wrappers/tool-call bytes unavailable. Candidate and independent race wrappers are retained and verified.",
+      "additionalBlanketStdlibReleaseGate": false
+    },
+    "javaDefaultScale8": {
+      "status": "failed-independent-control-reproduced",
+      "sourceAndConsumerRerun": true,
+      "pngDetected": 442,
+      "pngExpected": 446,
+      "matrixDetected": 446,
+      "samePixelControlMisses": 4
+    },
+    "linux386EmulatedDebug": {
+      "status": "failed-both-compilers",
+      "details": "linux386-emulation.json",
+      "sourceReceiptSha256": "8d99e3d1a9ba7d5f315247f620cdd17d711ef4375c88048f00d5a19f30221513",
+      "cause": "unassigned"
+    }
+  },
+  "sourceArchiveVerification": {
+    "v5BundleSha256": "87f67dc50b7646b0e933c7c7de96db8174a71162b3af83bad06c1b3d00699c4a",
+    "manifestFileHashesVerified": 615,
+    "previousV4FileHashesPreserved": 610,
+    "correctedSourceArchiveSha256": "c72ed7456f05a184fe823e692e686be6cbe3f4109f30e6c47d200fd4111ff7b7",
+    "correctedSourceArchiveFiles": 82,
+    "independentWindowsReviewSha256": "a03e2ee7aae0ae9b4c84f6c253a412cf7e1697a6b9bb34d1c33ea3669f609ef5",
+    "outerArchiveSourceReviewSha256": "bf4b7f7661d3d4909e2a17f1118720b189c3d89aa0d9d94c486bfb2d7948d626"
+  },
+  "pending": [
+    "Known limitation retained: Linux386 emulated root-package all-packages-unoptimized debug fails both compilers; Windows386 debug failures are also retained. Native Linux386 is unrun. These conditions are explicitly disclosed for initial publication rather than marked passed.",
+    "After prepublication gates: source publication, exact-commit public CI, fresh public clone and separately fetched pinned public module/CLI consumer."
+  ],
+  "limitations": [
+    "Finite tests, fuzzing and source inspection are not ISO/GS1 certification or proof of defect absence.",
+    "Native platform/runtime evidence and later documentation-only archive changes remain distinct."
+  ],
+  "releaseScope": {
+    "decisionDateUTC": "2026-10-04",
+    "initialPublicationAccepted": true,
+    "scope": "Use the documented normal-build evidence and disclose known 32-bit failures when optimizations are disabled for all packages, including standard library and runtime.",
+    "failedGateStatusUnchanged": true,
+    "nativeLinux386Validated": false,
+    "emulatedLinux386Labeled": true,
+    "minimumGoUnchanged": "1.26.8",
+    "allConfigurationsValidatedClaim": false
+  }
+}

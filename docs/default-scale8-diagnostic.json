@@ -1,0 +1,516 @@
+{
+  "status": "failed",
+  "scope": "Complete ZXing Java PNG detection at the Go renderer default scale 8; not part of the separately passing scale-3 lane.",
+  "reportSha256": "f418b6fed5b47bfd94f538eba51718457752036b2ceeeab1fc624d28faa6b77b",
+  "candidateBinarySha256": "9520cacd1f96ed68f6fd70f857cf1999ae68021ad1fbe0a6e24151f23bc6a785",
+  "sourceSha256": {
+    "api.go": "b3445acf8ba582d597a6556a68958965cdf816d2661187991360c31d85482781",
+    "api_test.go": "8adf313a02f5b9abde8e86d05c5ab65abf1621e95c9f87bc4da6782511ea64c4",
+    "cmd/specqr/main.go": "35b473420ec938262cdc30b4a7e04174832b839c25d79d3659da903ae3297c1c",
+    "cmd/specqr/main_test.go": "48c2c8fd945dc39685e22f8e30a92fec00eeaf862e8d3b1c19070491fd5cdd00",
+    "core.go": "8ba53ccaf0647bc2d837611ddb864442c9b858b97a9ab0531ccd549b49e5665a",
+    "core_test.go": "1d8991121e16673310c521275fbfe2fcd25ce2be66ffd145fc1c5a158ea4da0b",
+    "diagnostics.go": "6e69afd570a286a664af5551b57f515363aa2830553be93b12b6a9c96f3e25fa",
+    "doc.go": "9a38e132bf9a4bc10090788b8fd37754f5fcc26b06b8ca2116ed86d110eea1ea",
+    "error.go": "67d3cbb42b9a0561961f56cd31ba820c07a61f4d1cac7f4a4444a7e92cd656b1",
+    "example_test.go": "f7372717226ba7084e52ad29ab4730ee4e645d0f1ae41190b4ade4e44c6d0830",
+    "examples/basic/main.go": "378b4e2e33d3428fefb9b4ee80efe1a737708d0d4142f9bcb00fd4253e8b459f",
+    "gs1.go": "d4f55893ff31791e9a768f68420e0608057aec36f32212a118679a308ec060b8",
+    "gs1_test.go": "dd703a829ce8a229832c289a6e0378317a2ee7f98da9bbb8460bcd0cacacc227",
+    "idna_table.go": "5d32911bc45df2306564295e0995458cd7f97b21311404120de4da06a7fe9603",
+    "kanji.go": "b21e59c4a0e38660a8ad08e4bcae12bb2b2988b4e8e6624d9718af37c5e802af",
+    "kanji_test.go": "00ccfc37c9ac62e6eb268d566a621d016a78ae5710745bcb203f8c6fa0d71438",
+    "render.go": "0c0c588bcd5deefa7d953b946e4cdf16ebb0a234220650639d4a87583599dafe",
+    "segment.go": "658e13ddc4af6528ee5bd458def4b522aac788c24dd0fcd26629be855cffeb4f",
+    "segment_test.go": "e8f798b75e27d31407cb9202006523af08ae897621fc89a701ef306a51b6f30e",
+    "structured_append.go": "34e18ad9621e26fbddb7f2355cffb00e3b309787813774ab2e75c1fff96421b8",
+    "structured_append_test.go": "be776e5b49d44cc7b413ed395966ca737e1116e508717e35fa2a0e188fc095e8",
+    "tables.go": "9a008988301374cfabf74b03a538e00d316c4c06942542612f58f1a1fed3ec63",
+    "tables_test.go": "0763d741b3d5905046da376750abc90e73a7a3ab6bdc2eada6209fdc3d420464",
+    "tools/conformance/main.go": "9d8be36dc65c34f337441249a46755571d458ccacadfefbae3fe26e01281cdd0",
+    "tools/conformance/main_test.go": "28fb393176c8c1471e35b571d0c1af1e24af93ae6d2f7858b2feb97bae3c088c",
+    "url.go": "88a5b8acfe22e836f6b9675fb337f89171394b8552663b8e41b1ce90008ee322",
+    "url_test.go": "1045e848a79da61da103018725dd64dd49cec580d19cc170e5f1d4fdb507e814",
+    "go.mod": "0cf58e7df4d2d858ffd22011c58366dbc0f03d13e7a35f62de0b4688241ed15d"
+  },
+  "testToolSha256": {
+    "README.md": "2082bdab3626cefc166602e296c322946ad1783193a53286889d6d0cd2975e51",
+    "build_consumer.py": "acdc1d1e053894838fdf5690f2a867a21c99fad9b4487055dfd428df9c1b05b1",
+    "decode_jsqr.mjs": "5455d6921f24a3c4b5ede8ca4e61be9fcae0a9654677f9719677dfe5eb7fb8a0",
+    "eci-control.mjs": "4852276b75039a974973e2356fddedf665aab5c303b91076cb1d880ee6148de7",
+    "gs1/corpus.py": "a4c6c267608b380c4a21d5487a0e3d76eb7d6e16a9c413167a075ea89a839c68",
+    "gs1/go-url-outcomes.json": "190b0c5376223d0b1c1c2f6cf00d12d6be8bdd1345ac27e79123405a759d7855",
+    "gs1/go_profile.py": "23d35fbdb6e45b376ab90d6e865debefba01e6de14c775f041cc3380dae48152",
+    "gs1/host-safety-cases.json": "5522d50a61eb27cba12e10fc3a19f3562f9fe61c6eb2fcd3b914616b47eda865",
+    "gs1/oracle.mjs": "261b3ffdba83b3cc37a3650b0bfa2fe31a05818baee39e752a41a01f89ab2576",
+    "gs1/reference-url-outcomes.json": "73f0ac8c1e2c5be02de81e9f6209579b4cd5258f285e9901bdcfc770f87b1d71",
+    "merge-oracle.mjs": "d187ef90817e1008344e799494515aa5d1a05547efe3ef953596f82bdb82eb9b",
+    "node_identity.mjs": "a40922bd5e48783e0d7dccb87bc17d93fec183ec00d533eebb418475f6145d88",
+    "oracle.mjs": "82bd5991d992feb2a0676e7c253f3e268de414304da179a2a1b83a996f94066f",
+    "package-lock.json": "5bc840a3bf58d3c53071441ca7ae4e6efe7d05ab09957cf06bfeb21724204538",
+    "package.json": "07c8a29e7430d30054fad7d8fe368a41f36d9d9373215b9bda31f2877937db4d",
+    "protocol.py": "86ea244dd555c231362a16bdc84b467bdeae7dff2cb56529fb758f0258fef322",
+    "run_all.py": "ca76ea1a9500aa144d31fd49e13b36f8696b380791b988ca8eba4a6654724785",
+    "structured-append-cases.json": "cf23690ef0e49060c2a3913f9e0cf6bd167b8c0bc103d4dcb863e651f0d7119b",
+    "structured-append-golden.mjs": "669539415ae91d272d4d0287df8e53131a43c9ee0b4a5c79324e98fe32e46eae",
+    "summarize_default_scale.py": "9ed9532716a8775d231c1f9016f6adde9769d0371692d5c415214211c5bcbaf8",
+    "summarize_reports.py": "c96dcf1304b459bfcdb8bbfd09cc58febf1e0ee8406ea4595fb1d7b323937d56",
+    "verify_conformance.py": "05cff24b866943a92abc95eacabcaf87027f7c46c08f5928cd0075da5a024957",
+    "verify_decoders.py": "17708a7f40362b003e16c0be6cb4178fd85d1a29539c07307419bee3cfb8929e",
+    "verify_gs1.py": "cd878eec4437e9ac5a69a647db7a85233c1f1140d73c1fcc0f3eadd9b2a9e187",
+    "verify_jsqr.py": "af55cb3961fe4a41f7890e848ac9b8d31df85c3626bfc4275fd2432335b7f772",
+    "verify_structured_append.py": "7a0707e2fa183ade61f31d216c558ac01411525846d0b3b0402dc8a97a1a8dc3",
+    "zxing-cpp-requirements.txt": "c44d88445ebed50625951b7289af9b4acbf5aece869e6aafd03f9aba7bc99429",
+    "zxing-java/DecodeSymbols.java": "e8db286f8d05f11f0b8889020842c163034ff00c4d72f25de0ddd6e1b1bc5ef2",
+    "../conformance/main.go": "9d8be36dc65c34f337441249a46755571d458ccacadfefbae3fe26e01281cdd0"
+  },
+  "decoder": "ZXing Java 3.5.4",
+  "jarSha256": "71de5d89341b5fcf5dd89da7f44e84d825d0e084cdf3ec77c9abe26b0f0ceb13",
+  "javaRuntime": [
+    "openjdk 21.0.12.1 2026-08-18",
+    "OpenJDK Runtime Environment (build 21.0.12.1+1-1-deb13u1-Debian)",
+    "OpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-deb13u1-Debian, mixed mode, sharing)"
+  ],
+  "javaExecutableSha256": "6698f6f10143ed8463b06062281c727152d2e0ae2a3569b1716fbb2c6cedf0ba",
+  "pngScale": 8,
+  "pureBarcodeHint": false,
+  "counts": {
+    "matrixDecodes": 446,
+    "pngDecodes": 442,
+    "verifiedRgbaPixels": 71169920,
+    "structuredAppendHeaders": 135,
+    "fnc1SecondSymbols": 0,
+    "damagedSymbolsCorrected": 32,
+    "eciTextModeChecks": 0,
+    "highLevelSets": 5,
+    "highLevelSymbols": 44,
+    "independentReconstructions": 10
+  },
+  "decodedVersions": {
+    "matrix": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "png": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ]
+  },
+  "javaDefaultScaleCorpus": {
+    "scope": "isolated complete Java default-scale8 diagnostic",
+    "status": "failed",
+    "attempted": 446,
+    "successes": 442,
+    "failures": 4,
+    "byVersion": {
+      "4": {
+        "attempted": 225,
+        "successes": 222,
+        "failures": 3
+      },
+      "1": {
+        "attempted": 25,
+        "successes": 25,
+        "failures": 0
+      },
+      "2": {
+        "attempted": 159,
+        "successes": 158,
+        "failures": 1
+      },
+      "3": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "5": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "6": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "7": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "8": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "9": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "10": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "11": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "12": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "13": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "14": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "15": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "16": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "17": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "18": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "19": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "20": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "21": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "22": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "23": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "24": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "25": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "26": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "27": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "28": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "29": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "30": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "31": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "32": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "33": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "34": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "35": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "36": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "37": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "38": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "39": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      },
+      "40": {
+        "attempted": 1,
+        "successes": 1,
+        "failures": 0
+      }
+    },
+    "failureControls": [
+      {
+        "case": "alphanumeric-L-0",
+        "version": 4,
+        "candidateOutcome": {
+          "error": "NotFoundException"
+        },
+        "candidatePngSha256": "b500ea2e6bbeafcce8e81718ee30b2085cad7283cd81689928dfe76b47d39379",
+        "controlPngSha256": "73dbb0619cf0e1f4a89fe94693c7813febf49fc87cc688db84a1b978146a31b0",
+        "matrixSha256": "afe9eb218390955d8742719b98b5c4735171fe3248b393f77a64437f3c1c6047",
+        "independentControlPixelsIdentical": true,
+        "countedAsStrictSuccess": false,
+        "controlOutcome": {
+          "error": "NotFoundException"
+        },
+        "matchingOutcomes": true
+      },
+      {
+        "case": "alphanumeric-L-7",
+        "version": 4,
+        "candidateOutcome": {
+          "error": "NotFoundException"
+        },
+        "candidatePngSha256": "ced3d415241dfaaee7d11cb9994cd6dec433346510e60139883d171501f3236f",
+        "controlPngSha256": "c086650e132005ee913c6567cdbf5124cc3a9880f71c9343c1573ef6c95f8596",
+        "matrixSha256": "eda02fec57b42e0a12ffaa10d81ce1627ac7ba8ffe2d8d9272b856e4eee8dd9e",
+        "independentControlPixelsIdentical": true,
+        "countedAsStrictSuccess": false,
+        "controlOutcome": {
+          "error": "NotFoundException"
+        },
+        "matchingOutcomes": true
+      },
+      {
+        "case": "utf8-H-0",
+        "version": 4,
+        "candidateOutcome": {
+          "error": "NotFoundException"
+        },
+        "candidatePngSha256": "0bad777a8ca9a01127db82d8ce4f0a67d471bd36def2b9375ba4927071171b0b",
+        "controlPngSha256": "9140af4aea3579c7836a12ba633c0a4d8882443b9fb02213cb497e18872b861b",
+        "matrixSha256": "7c67f61749ec93dc5a24c177db905c53ef467608858339d43de6f0aa64487bcc",
+        "independentControlPixelsIdentical": true,
+        "countedAsStrictSuccess": false,
+        "controlOutcome": {
+          "error": "NotFoundException"
+        },
+        "matchingOutcomes": true
+      },
+      {
+        "case": "sa-2-15",
+        "version": 2,
+        "candidateOutcome": {
+          "error": "ChecksumException"
+        },
+        "candidatePngSha256": "7b05a9ce11ad125b48707560e88aa2bfff5df5512df0e3c34d2ecf1989b8e3b1",
+        "controlPngSha256": "0dd05cf24d213a618831fe62ca9554554a08380727c87a40f9da2803a85b4e0d",
+        "matrixSha256": "ec4c210162b323436414fec63c5dd7b20abd2fc744fd854fa8abf056e5988443",
+        "independentControlPixelsIdentical": true,
+        "countedAsStrictSuccess": false,
+        "controlOutcome": {
+          "error": "ChecksumException"
+        },
+        "matchingOutcomes": true
+      }
+    ],
+    "countedAsStrictScale3Success": false,
+    "allFailureControlsPixelIdentical": true,
+    "allFailureControlOutcomesMatch": true
+  },
+  "failures": [
+    {
+      "case": "alphanumeric-L-0",
+      "route": "png",
+      "actual": {
+        "ordinal": 3,
+        "error": "NotFoundException"
+      }
+    },
+    {
+      "case": "alphanumeric-L-7",
+      "route": "png",
+      "actual": {
+        "ordinal": 101,
+        "error": "NotFoundException"
+      }
+    },
+    {
+      "case": "utf8-H-0",
+      "route": "png",
+      "actual": {
+        "ordinal": 343,
+        "error": "NotFoundException"
+      }
+    },
+    {
+      "case": "sa-2-15",
+      "route": "png",
+      "actual": {
+        "ordinal": 665,
+        "error": "ChecksumException"
+      }
+    },
+    {
+      "error": "Strict decoder coverage count mismatch",
+      "expectedCounts": {
+        "matrixDecodes": 446,
+        "pngDecodes": 446,
+        "verifiedRgbaPixels": 71169920,
+        "structuredAppendHeaders": 135,
+        "fnc1SecondSymbols": 0,
+        "damagedSymbolsCorrected": 32,
+        "eciTextModeChecks": 0,
+        "highLevelSets": 5,
+        "highLevelSymbols": 44,
+        "independentReconstructions": 10
+      },
+      "actualCounts": {
+        "matrixDecodes": 446,
+        "pngDecodes": 442,
+        "verifiedRgbaPixels": 71169920,
+        "structuredAppendHeaders": 135,
+        "fnc1SecondSymbols": 0,
+        "damagedSymbolsCorrected": 32,
+        "eciTextModeChecks": 0,
+        "highLevelSets": 5,
+        "highLevelSymbols": 44,
+        "independentReconstructions": 10
+      }
+    }
+  ],
+  "elapsedSeconds": 21.045,
+  "conclusion": "Four actual Go PNG detection failures are independently reproduced by pixel-identical separately encoded controls. These failures remain failures; no matrix fallback, exclusion or scale substitution counts them as PNG successes."
+}

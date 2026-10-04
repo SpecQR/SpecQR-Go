@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-03",
+  "status": "local-review-passed",
+  "releaseGateStatus": "Reviewed initial scope accepts documented 32-bit all-packages-unoptimized limitations; failed evidence remains failed",
+  "publicationStatus": "Original review did not publish; initial publication scope later accepted. See platform-status.json.",
+  "module": "github.com/SpecQR/SpecQR-Go",
+  "candidateVersion": "0.1.0-rc.1",
+  "reviewMethod": "Independent source inspection plus separately authored external-module tests and direct public CLI reproductions. Existing package tests and bounded fuzz targets were also run independently. This review does not claim to have independently rerun every oracle lane.",
+  "sourceIdentity": {
+    "scope": "All 27 Go source/test/example/adapter files plus go.mod. Documentation/report files are excluded to avoid self-reference; final delivery archive has its own package receipt.",
+    "manifestAlgorithm": "SHA-256 of UTF-8 JSON with sorted keys and compact separators mapping relative filenames to per-file SHA-256 values.",
+    "manifestSha256": "af5539ed5e47abd6d436960fe887f44d9344f884f467efb479f3314777c221ce",
+    "files": {
+      "api.go": "b3445acf8ba582d597a6556a68958965cdf816d2661187991360c31d85482781",
+      "api_test.go": "8adf313a02f5b9abde8e86d05c5ab65abf1621e95c9f87bc4da6782511ea64c4",
+      "cmd/specqr/main.go": "35b473420ec938262cdc30b4a7e04174832b839c25d79d3659da903ae3297c1c",
+      "cmd/specqr/main_test.go": "48c2c8fd945dc39685e22f8e30a92fec00eeaf862e8d3b1c19070491fd5cdd00",
+      "core.go": "8ba53ccaf0647bc2d837611ddb864442c9b858b97a9ab0531ccd549b49e5665a",
+      "core_test.go": "1d8991121e16673310c521275fbfe2fcd25ce2be66ffd145fc1c5a158ea4da0b",
+      "diagnostics.go": "6e69afd570a286a664af5551b57f515363aa2830553be93b12b6a9c96f3e25fa",
+      "doc.go": "9a38e132bf9a4bc10090788b8fd37754f5fcc26b06b8ca2116ed86d110eea1ea",
+      "error.go": "67d3cbb42b9a0561961f56cd31ba820c07a61f4d1cac7f4a4444a7e92cd656b1",
+      "example_test.go": "f7372717226ba7084e52ad29ab4730ee4e645d0f1ae41190b4ade4e44c6d0830",
+      "examples/basic/main.go": "378b4e2e33d3428fefb9b4ee80efe1a737708d0d4142f9bcb00fd4253e8b459f",
+      "go.mod": "0cf58e7df4d2d858ffd22011c58366dbc0f03d13e7a35f62de0b4688241ed15d",
+      "gs1.go": "d4f55893ff31791e9a768f68420e0608057aec36f32212a118679a308ec060b8",
+      "gs1_test.go": "dd703a829ce8a229832c289a6e0378317a2ee7f98da9bbb8460bcd0cacacc227",
+      "idna_table.go": "5d32911bc45df2306564295e0995458cd7f97b21311404120de4da06a7fe9603",
+      "kanji.go": "b21e59c4a0e38660a8ad08e4bcae12bb2b2988b4e8e6624d9718af37c5e802af",
+      "kanji_test.go": "00ccfc37c9ac62e6eb268d566a621d016a78ae5710745bcb203f8c6fa0d71438",
+      "render.go": "0c0c588bcd5deefa7d953b946e4cdf16ebb0a234220650639d4a87583599dafe",
+      "segment.go": "658e13ddc4af6528ee5bd458def4b522aac788c24dd0fcd26629be855cffeb4f",
+      "segment_test.go": "e8f798b75e27d31407cb9202006523af08ae897621fc89a701ef306a51b6f30e",
+      "structured_append.go": "34e18ad9621e26fbddb7f2355cffb00e3b309787813774ab2e75c1fff96421b8",
+      "structured_append_test.go": "be776e5b49d44cc7b413ed395966ca737e1116e508717e35fa2a0e188fc095e8",
+      "tables.go": "9a008988301374cfabf74b03a538e00d316c4c06942542612f58f1a1fed3ec63",
+      "tables_test.go": "0763d741b3d5905046da376750abc90e73a7a3ab6bdc2eada6209fdc3d420464",
+      "tools/conformance/main.go": "9d8be36dc65c34f337441249a46755571d458ccacadfefbae3fe26e01281cdd0",
+      "tools/conformance/main_test.go": "28fb393176c8c1471e35b571d0c1af1e24af93ae6d2f7858b2feb97bae3c088c",
+      "url.go": "88a5b8acfe22e836f6b9675fb337f89171394b8552663b8e41b1ce90008ee322",
+      "url_test.go": "1045e848a79da61da103018725dd64dd49cec580d19cc170e5f1d4fdb507e814"
+    }
+  },
+  "checkedScopes": [
+    "Public option, segment, matrix, color, GS1 and Structured Append input validation and typed errors",
+    "QR count fields, control prefixes, padding, Reed-Solomon interleaving, module placement and deterministic mask selection source inspection",
+    "Finite integer arithmetic, 32-bit compile boundaries, UTF-8 validation and bounded rendering/segmentation allocation",
+    "Defensive-copy ownership and concurrent readers of generated symbols and diagnostics",
+    "High-level FNC1 literal-percent safety and low-level manual-segment preservation",
+    "Structured Append UTF-8 and binary reassembly, parity verification and greedy split boundaries",
+    "GS1 URL dot-only values, percent literals, query preservation and normalization stability",
+    "CLI input exclusivity, strict JSON field/payload handling, Unicode and nesting rejection",
+    "Zero external Go modules/CGO, package isolation, installed CLI and repeatable source/binary builds",
+    "Public API, security boundaries, platform limitations and prepublication documentation"
+  ],
+  "linuxAmd64": {
+    "nativeToolchains": [
+      "go1.26.8",
+      "go1.27.1"
+    ],
+    "passedOnBoth": [
+      "go test -count=1 ./...",
+      "go test -race -count=1 ./...",
+      "go vet ./...",
+      "CGO_ENABLED=0 go test -count=1 ./...",
+      "go test -count=1 -gcflags=all=\"-N -l\" ./...",
+      "Independent external-module review tests with -race",
+      "tools/verify_package.py: detached tests, installed CLI, separate module consumer, repeatable archive and binary"
+    ],
+    "additionalPassed": [
+      "gofmt clean",
+      "Pinned Unicode generator --check",
+      "go doc -all ."
+    ],
+    "externalGoDependencies": [],
+    "cgoSourceFiles": []
+  },
+  "independentTestCases": {
+    "optimalSegmentation": {
+      "cases": 1200,
+      "method": "Independent quadratic minimum-cost partition enumeration",
+      "versions": [
+        1,
+        9,
+        10,
+        26,
+        27,
+        40
+      ]
+    },
+    "otherCases": [
+      "Malformed exported arguments including integer extremes, ragged grids and invalid UTF-8",
+      "Count boundaries at 0/1/255/256/2953/2954/65535/65536 bytes",
+      "Deep diagnostic/options/segment/codeword copy mutation and concurrent readers",
+      "Dot-only and percent-like GS1 qualifier values plus reserved URI characters",
+      "All data modes, optimized mixed text and arbitrary bytes through Structured Append reassembly"
+    ],
+    "fuzz": {
+      "toolchain": "go1.26.8",
+      "campaigns": 6,
+      "requestedSecondsPerCampaign": 15,
+      "executions": 1379435,
+      "failures": 0,
+      "targets": [
+        "FuzzPublicAPINoPanic",
+        "FuzzCorePublicInputs",
+        "FuzzSegmentsPublicInputs",
+        "FuzzGS1Helpers",
+        "FuzzGS1URLAdapter",
+        "FuzzMergeNoPanic"
+      ],
+      "scope": "An isolated snapshot whose root Go files were verified byte-identical to the final reviewed root Go files. CLI fixes were checked separately."
+    }
+  },
+  "resolvedFindings": [
+    {
+      "id": "CLI-001",
+      "severity": "medium",
+      "location": "cmd/specqr/main.go:172 parseSegments",
+      "finding": "Mode-inapplicable known JSON fields could silently discard payload.",
+      "resolution": "Per-mode fields and explicit data payload are validated; original numeric-with-bytes reproduction now exits 2."
+    },
+    {
+      "id": "CLI-002",
+      "severity": "low",
+      "location": "cmd/specqr/main.go:326",
+      "finding": "Explicit -text plus positional text silently replaced one payload.",
+      "resolution": "Conflicting text sources reject with exit 2."
+    },
+    {
+      "id": "CLI-003",
+      "severity": "medium",
+      "location": "cmd/specqr/main.go:122 validateJSONTokens",
+      "finding": "JSON null byte values silently became NUL bytes.",
+      "resolution": "Null values reject before typed JSON conversion; reproduced original case exits 2. Duplicate keys and unexpected field casing also reject."
+    },
+    {
+      "id": "CLI-004",
+      "severity": "low",
+      "location": "cmd/specqr/main.go:172 parseSegments",
+      "finding": "Top-level JSON null was treated as an empty segment array.",
+      "resolution": "The segment document must be an array; original null-root case exits 2."
+    },
+    {
+      "id": "CLI-005",
+      "severity": "medium",
+      "location": "cmd/specqr/main.go:122 validateJSONTokens",
+      "finding": "Recursive token validation permitted excessive nesting before typed decoding rejected it.",
+      "resolution": "Explicit depth bound rejects before deep traversal. A 100,000-level, 200,001-byte reproduction now exits 2 in approximately 2 ms at approximately 10 MB subprocess peak RSS, versus approximately 81 MB before the fix. No fatal-stack-overflow claim is made."
+    },
+    {
+      "id": "PKG-001",
+      "severity": "medium",
+      "location": "tools/verify_package.py:24,50-58; .github/workflows/ci.yml",
+      "finding": "Implicit encoding of Japanese consumer source could fail on a non-UTF-8 Windows locale.",
+      "resolution": "Explicit UTF-8 file/subprocess IO and PYTHONUTF8 are present. Linux package checks pass on both toolchains; native Windows validation remains pending."
+    },
+    {
+      "id": "DOC-001",
+      "severity": "low",
+      "location": "README.md; docs/gs1.md; docs/verification.md",
+      "finding": "Documentation needed to distinguish unpublished status, flag-parser text errors, and the scope of GS1 validation Context.",
+      "resolution": "Prepublication/native gates, conditional remote installation, flag-parser behavior and Context application are documented."
+    }
+  ],
+  "unresolvedLocalCodeFindings": [],
+  "crossCompilationOnly": [
+    {
+      "target": "linux/386",
+      "result": "Package test binaries compiled on both Go versions; CLI and additional test packages also compiled. Execution failed with exec format error on this host."
+    },
+    {
+      "target": "windows/amd64",
+      "result": "Public CLI cross-compiled with Go 1.26.8; no native Windows execution performed in this review."
+    },
+    {
+      "target": "darwin/arm64",
+      "result": "Public CLI cross-compiled with Go 1.26.8; no native macOS execution performed in this review."
+    }
+  ],
+  "pendingRequiredGates": [
+    {
+      "gate": "Publication and fresh public clone review",
+      "status": "not performed; withheld until required prepublication gates and authorization are satisfied"
+    }
+  ],
+  "limitations": [
+    "Finite source review, unit cases and fuzz campaigns are not a proof that every malformed input or arbitrary Unicode hostname has been covered.",
+    "No claim of ISO/GS1 certification, complete IDNA/WHATWG support, camera/print validation or every decoder/platform is made.",
+    "The separate Java default-scale-8 diagnostic retains its four PNG failures; this local review does not convert those failures into passes.",
+    "No source publication, release tag, deployment or remote CI execution was performed by this review."
+  ],
+  "nativeHandoffToolingReview": {
+    "status": "passed-source-and-local-guard-review",
+    "files": {
+      "tools/verify_native_platform.py": "06efac4b79336ff5b4386161d05aa4cbc511a120016fe1cb1280e7561f553428",
+      "docs/native-platform-validation.md": "b4cae1e9d883d0c6152798f64a0b7df06a2d95eaaf81fbf04d7ffcab0b3d74a4"
+    },
+    "checks": [
+      "Exact compiler/native OS/architecture checks; no cross-compilation-only pass",
+      "Required recorded operator native-execution attestation and explicit limits of emulator detection",
+      "macOS translated/normal/absent-OID/error probe paths tested with mocks; command uses sysctl -n without -i",
+      "Windows native AMD64/ARM64-translation/WOW64 probe paths tested with mocks",
+      "Outside-source and new-or-empty output guards independently exercised; preexisting receipt symlink did not modify its target",
+      "Missing compiler produces failed-or-blocked receipt rather than pass",
+      "Runner and Go-source fingerprints checked against mutation",
+      "No installation, publication or module-download command is performed; optional Linux386 path actually runs tests and CLI"
+    ],
+    "resolvedIssues": [
+      "Added known translation checks and recorded attestation instead of treating matching architecture strings as proof",
+      "Added fresh output directory guard against stale evidence and preexisting symlink writes",
+      "Removed sysctl -i to preserve reliable missing-OID handling on Intel macOS",
+      "Documented that the combined Linux386 runner requires a native Linux amd64 host with 32-bit execution support"
+    ],
+    "limitations": [
+      "Windows and macOS probe behavior was unit-tested with mocks on Linux, not executed natively",
+      "Arbitrary full-system emulation cannot be disproven by these process-level probes; truthful operator attestation is required",
+      "Full final runner smoke is performed separately and must be bound to this runner hash; all required missing native-platform gates remain pending"
+    ]
+  },
+  "reviewScope": "Original implementation and handoff-tooling review. Historical source/tool hashes and observations are retained; current platform/addendum evidence is in platform-status.json.",
+  "historicalPendingGatesAtOriginalReview": [
+    {
+      "gate": "Native Windows validation",
+      "status": "pending",
+      "toolchains": [
+        "go1.26.8",
+        "go1.27.1"
+      ],
+      "required": "Native tests, race, CLI and package/consumer checks"
+    },
+    {
+      "gate": "Native macOS validation",
+      "status": "pending",
+      "toolchains": [
+        "go1.26.8",
+        "go1.27.1"
+      ],
+      "required": "Native tests, race, CLI and package/consumer checks"
+    },
+    {
+      "gate": "Linux 386 execution",
+      "status": "pending",
+      "toolchains": [
+        "go1.26.8",
+        "go1.27.1"
+      ],
+      "required": "Tests and CLI on a compatible Linux executor; cross-compilation is not execution"
+    },
+    {
+      "gate": "Publication and fresh public clone review",
+      "status": "not performed; withheld until required prepublication gates and authorization are satisfied"
+    }
+  ],
+  "platformReviewAddendum": {
+    "date": "2026-10-04",
+    "currentSourceFingerprint": "752ed151c2f95eea6836432e12dd4c72c544ef87bcf235c0f4a74909efb13266",
+    "summary": "platform-status.json",
+    "windowsNativeAMD64": "passed both compilers; all 20 gates plus independent review race",
+    "macOSNativeARM64": "original native pass accepted for byte-identical production with reviewed api_test.go-only delta",
+    "windows386Debug": "Candidate Intel suites pass; previous candidate and independent stdlib failures retained without causal attribution",
+    "independentReviewSha256": "a03e2ee7aae0ae9b4c84f6c253a412cf7e1697a6b9bb34d1c33ea3669f609ef5"
+  },
+  "pendingBeforeExplicitScopeDecision": [
+    {
+      "gate": "Linux 386 execution",
+      "status": "emulated normal passed; root debug failed both compilers; native execution unrun",
+      "toolchains": [
+        "go1.26.8",
+        "go1.27.1"
+      ],
+      "required": "Resolve or explicitly assess retained debug failures without relabeling emulation as native; see linux386-emulation.json"
+    },
+    {
+      "gate": "Publication and fresh public clone review",
+      "status": "not performed; withheld until required prepublication gates and authorization are satisfied"
+    }
+  ],
+  "retainedUnresolvedConfiguration": {
+    "gate": "Linux386 all-packages-unoptimized debug",
+    "status": "failed both compilers under QEMU; native execution unrun",
+    "releaseDisposition": "explicitly disclosed limitation for initial publication; not marked passed",
+    "details": "linux386-emulation.json"
+  }
+}

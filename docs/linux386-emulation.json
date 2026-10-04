@@ -1,0 +1,385 @@
+{
+  "schemaVersion": 1,
+  "status": "failed-or-blocked",
+  "executionMode": "QEMU Linux user-mode instruction-set emulation",
+  "nativeLinux386Execution": false,
+  "sourceFingerprint": "752ed151c2f95eea6836432e12dd4c72c544ef87bcf235c0f4a74909efb13266",
+  "officialPackage": {
+    "officialMetadataURL": "https://packages.debian.org/trixie/amd64/qemu-user/download",
+    "downloadURL": "https://ftp.debian.org/debian/pool/main/q/qemu/qemu-user_10.0.13+ds-0+deb13u1_amd64.deb",
+    "package": "qemu-user",
+    "version": "1:10.0.13+ds-0+deb13u1",
+    "architecture": "amd64",
+    "packageBytes": 71089852,
+    "packageSha256": "ca6ede739327a20ae5a3498230c8a3a9a072c586e131bc6bcc1201eb1725e336",
+    "executableSha256": "3378bb95493e33dc6cb215a8d89c4aeb58d12201b817413a4c0449ffa5abb443",
+    "systemInstall": false,
+    "binfmtRegistration": false,
+    "securitySettingsChanged": false
+  },
+  "candidateRun": {
+    "startedAtUTC": "2026-10-04T05:35:09.264584+00:00",
+    "endedAtUTC": "2026-10-04T05:36:39.693571+00:00",
+    "receiptSha256": "8d99e3d1a9ba7d5f315247f620cdd17d711ef4375c88048f00d5a19f30221513",
+    "harnessSha256": "78aac8254e59583c31fac300f05a8c1779056c3cbab9bd51f2680b3522955483",
+    "commandCount": 118,
+    "versions": {
+      "go1.26.8": {
+        "status": "failed-or-blocked",
+        "gates": {
+          "CLIExampleStandaloneConsumer": "passed",
+          "allPackages-debug": "failed-or-blocked",
+          "allPackages-normal": "passed",
+          "externalGeometryReview-debug": "passed",
+          "externalGeometryReview-normal": "passed",
+          "externalIndependentReview-debug": "passed",
+          "externalIndependentReview-normal": "passed",
+          "runtimeIdentity": "passed"
+        },
+        "runtimeIdentity": {
+          "goarch": "386",
+          "gomaxprocs": 9,
+          "goos": "linux",
+          "intBits": 32,
+          "numCPU": 9,
+          "pointerBits": 32,
+          "settings": {
+            "-buildmode": "exe",
+            "-compiler": "gc",
+            "-trimpath": "true",
+            "CGO_ENABLED": "0",
+            "GO386": "sse2",
+            "GOARCH": "386",
+            "GOOS": "linux"
+          },
+          "version": "go1.26.8"
+        },
+        "goExecutableSha256": "d9a2fa19c7ef8b57f420012c21f49f235c46f08a68c12077d9c753dbb6ccdc34"
+      },
+      "go1.27.1": {
+        "status": "failed-or-blocked",
+        "gates": {
+          "CLIExampleStandaloneConsumer": "passed",
+          "allPackages-debug": "failed-or-blocked",
+          "allPackages-normal": "passed",
+          "externalGeometryReview-debug": "passed",
+          "externalGeometryReview-normal": "passed",
+          "externalIndependentReview-debug": "passed",
+          "externalIndependentReview-normal": "passed",
+          "runtimeIdentity": "passed"
+        },
+        "runtimeIdentity": {
+          "goarch": "386",
+          "gomaxprocs": 9,
+          "goos": "linux",
+          "intBits": 32,
+          "numCPU": 9,
+          "pointerBits": 32,
+          "settings": {
+            "-buildmode": "exe",
+            "-compiler": "gc",
+            "-trimpath": "true",
+            "CGO_ENABLED": "0",
+            "GO386": "sse2",
+            "GOARCH": "386",
+            "GOOS": "linux"
+          },
+          "version": "go1.27.1"
+        },
+        "goExecutableSha256": "30969f97169d7f43fe6a085873d75613adc21e30818a8c61d95bd27275df4624"
+      }
+    },
+    "integrityAfter": {
+      "detachedSourceUnchanged": true,
+      "geometryCopyUnchanged": true,
+      "geometryOriginalUnchanged": true,
+      "qemuUnchanged": true,
+      "reviewCopyUnchanged": true,
+      "reviewOriginalUnchanged": true,
+      "runnerUnchanged": true,
+      "sourceUnchanged": true
+    }
+  },
+  "normalCoverage": {
+    "rootTopLevelPassedPerVersion": 47,
+    "rootOptInSkippedPerVersion": 1,
+    "skippedTest": "TestGS1URLDifferential",
+    "skipReason": "SPECQR_URL_REFERENCE unset. This optional external Node lane was not executed in this emulated run; separate pinned independent lanes retain their own scope.",
+    "CLItestPassesPerVersion": 3,
+    "conformanceTestPassesPerVersion": 2
+  },
+  "debugFailures": {
+    "go1.26.8": {
+      "package": "github.com/SpecQR/SpecQR-Go",
+      "test": "TestGenerateOwnershipAndConcurrency",
+      "exitCode": 2,
+      "signature": "SIGSEGV in compress/flate.write through PNG BestCompression; deferred Close also panics index > windowEnd",
+      "testBinarySha256": "2b80fc377193bb2d1dcf416b2ec0f964c5b64315d5713262801d01567d056474"
+    },
+    "go1.27.1": {
+      "package": "github.com/SpecQR/SpecQR-Go",
+      "test": "TestSegmentBitWidthsAndCaps",
+      "exitCode": 2,
+      "signature": "nil dereference during local struct-slice assignment; fault PC maps to runtime.bulkBarrierPreWrite",
+      "testBinarySha256": "64df04cd29ad7d0f2769f4520396fb9ad35bfcfdcbeebb3e7daba4f3115969c4",
+      "faultPC": "0x80760e9",
+      "faultLocation": "runtime/mbitmap.go:454"
+    }
+  },
+  "limitations": [
+    "No fault cause assigned to Go, QEMU, SpecQR or host hardware.",
+    "No retry of failed candidate suites or runtime-knob change.",
+    "PNG-to-matrix pixel comparisons are consistency checks, not independent QR decoding.",
+    "Detached consumer is a local module, not a public network fetch.",
+    "Linux386 race detector is unsupported; nativeAMD64 race receipts remain separate.",
+    "Remaining root-package debug tests after each crash are not counted as passed."
+  ],
+  "boundedSpecQRFreeControl": {
+    "status": "completed-once-per-cell; one failed and three passed",
+    "receiptSha256": "1b936eb5dfdeebb1fb5ae2e088dd23e120b67407c2cfcc14bb7ac3287d25a8ad",
+    "sourceSha256": "eac25cc0412ccf4ab11611d7220875129a0d2aab16566a3e0a8f96acae078667",
+    "runnerSha256": "d2f8b2eeeb75f4c46fe730936f9dc2fbd0a29d1e71b2caa3fb37596c4c5c03af",
+    "debugFlag": "-gcflags=all=-N -l",
+    "runtimeTimeoutSeconds": 120,
+    "specqrImports": false,
+    "outcomes": [
+      {
+        "architecture": "386",
+        "binarySha256": "9a1d4877fc91a80bb9438a6277a8d60fc84d4ee589356f91099ca7bd4f3bbb81",
+        "durationSeconds": 0.26581,
+        "events": [
+          {
+            "goVersion": "go1.26.8",
+            "goarch": "386",
+            "gomaxprocsObserved": 9,
+            "goos": "linux",
+            "numCPU": 9,
+            "phase": "identity",
+            "pointerBits": 32,
+            "settings": {
+              "-buildmode": "exe",
+              "-compiler": "gc",
+              "-gcflags": "all=-N -l",
+              "CGO_ENABLED": "0",
+              "GO386": "sse2",
+              "GOARCH": "386",
+              "GOOS": "linux"
+            }
+          },
+          {
+            "encodesPerWorker": 8,
+            "imageHeight": 264,
+            "imageWidth": 264,
+            "phase": "png",
+            "status": "started",
+            "workers": 16
+          }
+        ],
+        "executionMode": "QEMU Linux/386 user-mode emulation",
+        "exitCode": 2,
+        "goVersion": "1.26.8",
+        "sourceSha256": "eac25cc0412ccf4ab11611d7220875129a0d2aab16566a3e0a8f96acae078667",
+        "status": "failed"
+      },
+      {
+        "architecture": "amd64",
+        "binarySha256": "825a6284814c6c0d27fbca903a08b8ecc7e6e6dcf4c58a3de3f72978b36667e3",
+        "durationSeconds": 0.776216,
+        "events": [
+          {
+            "goVersion": "go1.26.8",
+            "goarch": "amd64",
+            "gomaxprocsObserved": 9,
+            "goos": "linux",
+            "numCPU": 9,
+            "phase": "identity",
+            "pointerBits": 64,
+            "settings": {
+              "-buildmode": "exe",
+              "-compiler": "gc",
+              "-gcflags": "all=-N -l",
+              "CGO_ENABLED": "0",
+              "GOAMD64": "v1",
+              "GOARCH": "amd64",
+              "GOOS": "linux"
+            }
+          },
+          {
+            "encodesPerWorker": 8,
+            "imageHeight": 264,
+            "imageWidth": 264,
+            "phase": "png",
+            "status": "started",
+            "workers": 16
+          },
+          {
+            "encodes": 128,
+            "phase": "png",
+            "pixelsChecked": 8921088,
+            "status": "passed",
+            "totalPNGBytes": 93312
+          },
+          {
+            "phase": "assignment",
+            "rounds": 16,
+            "sequenceLength": 16385,
+            "status": "started",
+            "structBytes": 104
+          },
+          {
+            "assignmentsChecked": 262160,
+            "checksum": 2333998672,
+            "phase": "assignment",
+            "rounds": 16,
+            "status": "passed"
+          },
+          {
+            "gcCyclesDelta": 36,
+            "phase": "complete",
+            "status": "passed",
+            "totalAllocatedBytesDelta": 292890352
+          }
+        ],
+        "executionMode": "native Linux/AMD64",
+        "exitCode": 0,
+        "goVersion": "1.26.8",
+        "sourceSha256": "eac25cc0412ccf4ab11611d7220875129a0d2aab16566a3e0a8f96acae078667",
+        "status": "passed"
+      },
+      {
+        "architecture": "386",
+        "binarySha256": "06db02ca041625b4dce26761e7f438454e093dcfdc6b502aaf8cc5c7cfae4744",
+        "durationSeconds": 2.725495,
+        "events": [
+          {
+            "goVersion": "go1.27.1",
+            "goarch": "386",
+            "gomaxprocsObserved": 9,
+            "goos": "linux",
+            "numCPU": 9,
+            "phase": "identity",
+            "pointerBits": 32,
+            "settings": {
+              "-buildmode": "exe",
+              "-compiler": "gc",
+              "-gcflags": "all=-N -l",
+              "CGO_ENABLED": "0",
+              "GO386": "sse2",
+              "GOARCH": "386",
+              "GOOS": "linux"
+            }
+          },
+          {
+            "encodesPerWorker": 8,
+            "imageHeight": 264,
+            "imageWidth": 264,
+            "phase": "png",
+            "status": "started",
+            "workers": 16
+          },
+          {
+            "encodes": 128,
+            "phase": "png",
+            "pixelsChecked": 8921088,
+            "status": "passed",
+            "totalPNGBytes": 97152
+          },
+          {
+            "phase": "assignment",
+            "rounds": 16,
+            "sequenceLength": 16385,
+            "status": "started",
+            "structBytes": 52
+          },
+          {
+            "assignmentsChecked": 262160,
+            "checksum": 2333998672,
+            "phase": "assignment",
+            "rounds": 16,
+            "status": "passed"
+          },
+          {
+            "gcCyclesDelta": 38,
+            "phase": "complete",
+            "status": "passed",
+            "totalAllocatedBytesDelta": 321099488
+          }
+        ],
+        "executionMode": "QEMU Linux/386 user-mode emulation",
+        "exitCode": 0,
+        "goVersion": "1.27.1",
+        "sourceSha256": "eac25cc0412ccf4ab11611d7220875129a0d2aab16566a3e0a8f96acae078667",
+        "status": "passed"
+      },
+      {
+        "architecture": "amd64",
+        "binarySha256": "d1bf8a1b1d7826fb7224988c0b7042582c84c0d970cbe9c0da602155a756a774",
+        "durationSeconds": 0.521511,
+        "events": [
+          {
+            "goVersion": "go1.27.1",
+            "goarch": "amd64",
+            "gomaxprocsObserved": 9,
+            "goos": "linux",
+            "numCPU": 9,
+            "phase": "identity",
+            "pointerBits": 64,
+            "settings": {
+              "-buildmode": "exe",
+              "-compiler": "gc",
+              "-gcflags": "all=-N -l",
+              "CGO_ENABLED": "0",
+              "GOAMD64": "v1",
+              "GOARCH": "amd64",
+              "GOOS": "linux"
+            }
+          },
+          {
+            "encodesPerWorker": 8,
+            "imageHeight": 264,
+            "imageWidth": 264,
+            "phase": "png",
+            "status": "started",
+            "workers": 16
+          },
+          {
+            "encodes": 128,
+            "phase": "png",
+            "pixelsChecked": 8921088,
+            "status": "passed",
+            "totalPNGBytes": 97152
+          },
+          {
+            "phase": "assignment",
+            "rounds": 16,
+            "sequenceLength": 16385,
+            "status": "started",
+            "structBytes": 104
+          },
+          {
+            "assignmentsChecked": 262160,
+            "checksum": 2333998672,
+            "phase": "assignment",
+            "rounds": 16,
+            "status": "passed"
+          },
+          {
+            "gcCyclesDelta": 44,
+            "phase": "complete",
+            "status": "passed",
+            "totalAllocatedBytesDelta": 335002968
+          }
+        ],
+        "executionMode": "native Linux/AMD64",
+        "exitCode": 0,
+        "goVersion": "1.27.1",
+        "sourceSha256": "eac25cc0412ccf4ab11611d7220875129a0d2aab16566a3e0a8f96acae078667",
+        "status": "passed"
+      }
+    ],
+    "minimum386Failure": "PNG/flate fillWindow called with stale data, followed by nil Close; assignment phase not reached",
+    "interpretation": "A similar minimum-version PNG failure occurs without SpecQR code. This does not establish one shared cause or clear the original candidate failures, including Go1.27.1 write-barrier crash.",
+    "scopeLimit": "Fixed 128-encode work and 16 approximate allocation rounds; not the original heap history or scheduling; no retries or runtime tuning."
+  },
+  "nextAssessment": "No ordinary source fix identified. Initial publication explicitly accepts the documented 32-bit all-packages-unoptimized limitation. Both candidate debug failures remain failed; native Linux386 remains unrun."
+}

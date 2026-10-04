@@ -1,0 +1,5 @@
+[
+  {"mode": "eci", "assignmentNumber": 26},
+  {"mode": "numeric", "text": "1234567890"},
+  {"mode": "byte", "text": "日本語 😀"}
+]

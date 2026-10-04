@@ -1,0 +1,33 @@
+SpecQR Go
+Copyright (c) 2026 SpecQR contributors
+
+From-scratch pure Go QR Code Model 2 implementation based on the user-owned
+SpecQR algorithm and API contracts. No external Go modules, CGO, native QR
+bindings, wrappers around other language editions or copied third-party QR
+source are used. Runtime has no network or resource-download requirement.
+
+Behavioral baseline: SpecQR/SpecQR JavaScript
+15ad15e5c770ea0e39072f8f88b2733018f02ffd (3.0.0-rc.2).
+The following owner editions were inspected to preserve corrected semantics:
+Python 1deb5cf83ed7a93eeb44138e5980a963a00cdffb
+Java 1f2bf277a582f0eb4e31c9975443c1a76552aa23
+Kotlin 33a4d1963160fde5cf46fbd8b53331dcbe88f375
+Rust ee46c934869371429716f9a9f9f7d91b5d836e1f
+C++ e91cd8fe4434fd6ef10d1126bb2fd17b0b19321f
+C# 057c4b3f25e52c4786a8f94c744ff884eedcecfa
+Conformance Lab 72ad78c979327e3e261526ea3c0a164efa4ab390
+
+QR block/capacity, BCH, placement and Reed-Solomon parameters are normative
+Model 2 data. The 6,953-scalar Kanji map follows the owner's canonical WHATWG
+Shift_JIS first mapping. See kanji.go for generator and digest provenance.
+The independent URL implementation has a documented bounded Unicode 15.0.0
+hostname profile; see docs/gs1.md. Generated Unicode data retains the Unicode
+License v3 in LICENSE-UNICODE. Original Go code is MIT licensed. Combined
+redistribution includes MIT AND Unicode-3.0 obligations.
+
+Go standard-library image/png provides PNG compression/serialization;
+encoding/base64 provides data URL encoding. PNG pixel output is deterministic,
+while compressed bytes are not promised stable between Go versions.
+Independent Nayuki, jsQR, ZXing-C++ and ZXing Java are development-only
+verification oracles under their own distribution licenses. No oracle source
+is linked to the Go library or production CLI.

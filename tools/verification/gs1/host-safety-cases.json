@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "policy": "Conservative Rust Unicode15.0.0 host safety profile. Rejected forms include combining/default-ignorable/compatibility-unstable scalars, malformed or noncanonical ACE, mixed RTL/LTR or numeral conventions, HangulJamo, and casefold-unstable scalars. Accepted values have explicit reviewed ASCII normalization.",
+  "reject": [
+    "e\u0301.com",
+    "\u034f.example",
+    "xn--a-ecp.example",
+    "xn--e-xbb.com",
+    "\ufb01.example",
+    "\u2460.example",
+    "\ufa10.example",
+    "\ufe0f.example",
+    "xn--jm6c.example",
+    "xn--orh.example",
+    "xn--nf6c.example",
+    "xn--v86c.example",
+    "\u05d0a.example",
+    "a\u05d0.example",
+    "xn--a-zhc.example",
+    "\u05d0-.example",
+    "\u06271\u0661.example",
+    "\u1100\u1161.example",
+    "\u13a0.example",
+    "\u13f8.example",
+    "\u1c80.example",
+    "\u1f80.example",
+    "\u2ff0.example",
+    "\ufffc.example",
+    "\ufffd.example"
+  ],
+  "accept": [
+    {
+      "raw": "b\u00fccher.example",
+      "ascii": "xn--bcher-kva.example"
+    },
+    {
+      "raw": "\u03b2\u03cc\u03bb\u03bf\u03c2.example",
+      "ascii": "xn--nxasmm1c.example"
+    },
+    {
+      "raw": "\u043f\u0440\u0438\u043c\u0435\u0440.example",
+      "ascii": "xn--e1afmkfd.example"
+    },
+    {
+      "raw": "\u05d0\u05d1.example",
+      "ascii": "xn--4dbc.example"
+    },
+    {
+      "raw": "\u0627\u0661.example",
+      "ascii": "xn--mgb0j.example"
+    },
+    {
+      "raw": "\ud55c\uae00.example",
+      "ascii": "xn--bj0bj06e.example"
+    },
+    {
+      "raw": "\u2603.example",
+      "ascii": "xn--n3h.example"
+    }
+  ]
+}
