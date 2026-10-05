@@ -1027,7 +1027,6 @@ func GS1CreateDigitalLink(elements []GS1Element, options GS1DigitalLinkOptions) 
 	}
 	u.path = pathname.String()
 	u.query = nil
-	u.fragment = nil
 	if search.Len() > 0 {
 		s := search.String()
 		u.query = &s

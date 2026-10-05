@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "scope": "Reusable behavioral regression cases for later port audit; no port changes are authorized by this file.",
+  "baselineRepository": "https://github.com/SpecQR/SpecQR",
+  "baselineCommit": "15ad15e5c770ea0e39072f8f88b2733018f02ffd",
+  "issues": {
+    "fnc1LiteralPercent": {
+      "priority": "payload data corruption",
+      "contract": "High-level text is literal; preserve percent and U+001D exactly. Baseline forced alphanumeric escapes each percent; auto picks bounded corrected segmentation/byte candidate. Existing ports can differ in encoding choices but must not silently alter decoded payload. Port-specific forced-mode refusal is a documented behavior difference, not proof of silent corruption.",
+      "cases": [
+        {
+          "id": "fnc1-1",
+          "input": "10ABC%DEF",
+          "expectedPayloadUtf8Hex": "313041424325444546",
+          "options": [
+            {
+              "gs1": true
+            },
+            {
+              "gs1": true,
+              "optimizeSegments": false
+            },
+            {
+              "gs1": true,
+              "mode": "byte"
+            }
+          ],
+          "forcedAlphanumeric": {
+            "gs1": true,
+            "mode": "alphanumeric",
+            "expectedPayloadUtf8Hex": "313041424325444546"
+          }
+        },
+        {
+          "id": "fnc1-2",
+          "input": "10ABC%%DEF",
+          "expectedPayloadUtf8Hex": "31304142432525444546",
+          "options": [
+            {
+              "gs1": true
+            },
+            {
+              "gs1": true,
+              "optimizeSegments": false
+            },
+            {
+              "gs1": true,
+              "mode": "byte"
+            }
+          ],
+          "forcedAlphanumeric": {
+            "gs1": true,
+            "mode": "alphanumeric",
+            "expectedPayloadUtf8Hex": "31304142432525444546"
+          }
+        },
+        {
+          "id": "fnc1-3",
+          "input": "10%ABC",
+          "expectedPayloadUtf8Hex": "313025414243",
+          "options": [
+            {
+              "gs1": true
+            },
+            {
+              "gs1": true,
+              "optimizeSegments": false
+            },
+            {
+              "gs1": true,
+              "mode": "byte"
+            }
+          ],
+          "forcedAlphanumeric": {
+            "gs1": true,
+            "mode": "alphanumeric",
+            "expectedPayloadUtf8Hex": "313025414243"
+          }
+        },
+        {
+          "id": "fnc1-4",
+          "input": "10ABC%",
+          "expectedPayloadUtf8Hex": "313041424325",
+          "options": [
+            {
+              "gs1": true
+            },
+            {
+              "gs1": true,
+              "optimizeSegments": false
+            },
+            {
+              "gs1": true,
+              "mode": "byte"
+            }
+          ],
+          "forcedAlphanumeric": {
+            "gs1": true,
+            "mode": "alphanumeric",
+            "expectedPayloadUtf8Hex": "313041424325"
+          }
+        },
+        {
+          "id": "fnc1-5",
+          "input": "10ABC%\u001d21DEF%",
+          "expectedPayloadUtf8Hex": "3130414243251d323144454625",
+          "options": [
+            {
+              "gs1": true
+            },
+            {
+              "gs1": true,
+              "optimizeSegments": false
+            },
+            {
+              "gs1": true,
+              "mode": "byte"
+            }
+          ]
+        },
+        {
+          "id": "fnc1-6",
+          "input": "10AAAAAAAAAAAAAAAAAAA%",
+          "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+          "options": [
+            {
+              "gs1": true
+            },
+            {
+              "gs1": true,
+              "optimizeSegments": false
+            },
+            {
+              "gs1": true,
+              "mode": "byte"
+            }
+          ],
+          "forcedAlphanumeric": {
+            "gs1": true,
+            "mode": "alphanumeric",
+            "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125"
+          }
+        },
+        {
+          "id": "fnc1-second-literal",
+          "input": "ABC%DEF%%",
+          "options": [
+            {
+              "fnc1Second": "37"
+            },
+            {
+              "fnc1Second": "A"
+            },
+            {
+              "fnc1Second": "A",
+              "mode": "alphanumeric"
+            }
+          ],
+          "expectedPayloadUtf8Hex": "414243254445462525",
+          "decoderNote": "ZXing-C++ prepends the application indicator to .bytes; Java3.5.4 may reject FNC1 second. Compare logical payload separately from decoder metadata."
+        }
+      ],
+      "controls": [
+        {
+          "input": "ABC%DEF",
+          "fnc1": false,
+          "expectedPayloadUtf8Hex": "41424325444546"
+        },
+        {
+          "manualSegments": [
+            {
+              "mode": "fnc1"
+            },
+            {
+              "mode": "alphanumeric",
+              "data": "ABC%DEF"
+            }
+          ],
+          "expectedPayloadUtf8Hex": "4142431d444546"
+        },
+        {
+          "manualSegments": [
+            {
+              "mode": "fnc1"
+            },
+            {
+              "mode": "alphanumeric",
+              "data": "ABC%%DEF"
+            }
+          ],
+          "expectedPayloadUtf8Hex": "41424325444546"
+        }
+      ]
+    },
+    "digitalLinkDotLoss": {
+      "priority": "payload data loss",
+      "contract": "No silent loss during URL normalization. Preserve safely placed query dots. Do not import unrelated stricter host/IDNA/query/Unicode policies. URL objects are already normalized; missing raw text cannot be recovered.",
+      "cases": [
+        {
+          "id": "builder-dot-path",
+          "elements": [
+            {
+              "ai": "01",
+              "value": "04912345678904"
+            },
+            {
+              "ai": "10",
+              "value": "."
+            }
+          ],
+          "options": {
+            "baseUrl": "https://example.com"
+          },
+          "expect": "reject without returning a lossy URI"
+        },
+        {
+          "id": "builder-parent-path",
+          "elements": [
+            {
+              "ai": "01",
+              "value": "04912345678904"
+            },
+            {
+              "ai": "10",
+              "value": ".."
+            }
+          ],
+          "options": {
+            "baseUrl": "https://example.com"
+          },
+          "expect": "reject without returning a lossy URI"
+        },
+        {
+          "id": "raw-dot-0",
+          "uri": "https://example.com/01/04912345678904/10/.",
+          "operations": [
+            "parse",
+            "validate",
+            "normalize"
+          ],
+          "expect": "reject destructive raw payload dot segments"
+        },
+        {
+          "id": "raw-dot-1",
+          "uri": "https://example.com/01/04912345678904/10/..",
+          "operations": [
+            "parse",
+            "validate",
+            "normalize"
+          ],
+          "expect": "reject destructive raw payload dot segments"
+        },
+        {
+          "id": "raw-dot-2",
+          "uri": "https://example.com/01/04912345678904/10/%2e",
+          "operations": [
+            "parse",
+            "validate",
+            "normalize"
+          ],
+          "expect": "reject destructive raw payload dot segments"
+        },
+        {
+          "id": "raw-dot-3",
+          "uri": "https://example.com/01/04912345678904/10/%2E%2e",
+          "operations": [
+            "parse",
+            "validate",
+            "normalize"
+          ],
+          "expect": "reject destructive raw payload dot segments"
+        },
+        {
+          "id": "raw-dot-4",
+          "uri": "https://example.com/01/04912345678904/10/.%2E",
+          "operations": [
+            "parse",
+            "validate",
+            "normalize"
+          ],
+          "expect": "reject destructive raw payload dot segments"
+        },
+        {
+          "id": "raw-dot-5",
+          "uri": "https://example.com/01/04912345678904/10/%2e.",
+          "operations": [
+            "parse",
+            "validate",
+            "normalize"
+          ],
+          "expect": "reject destructive raw payload dot segments"
+        },
+        {
+          "id": "erased-first-primary",
+          "uri": "https://example.com/01/./../01/04912345678904",
+          "operations": [
+            "parse",
+            "validate",
+            "normalize"
+          ],
+          "expect": "reject even though URL normalization otherwise leaves a valid-looking later primary"
+        },
+        {
+          "id": "query-dot-preservation",
+          "uri": "https://example.com/01/04912345678904?10=..&21=.&utm=a&utm=b",
+          "operations": [
+            "parse",
+            "validate",
+            "normalize"
+          ],
+          "expectedNormalizedUri": "https://example.com/01/04912345678904?10=..&21=.&utm=a&utm=b",
+          "expectedElements": [
+            {
+              "ai": "01",
+              "value": "04912345678904"
+            },
+            {
+              "ai": "10",
+              "value": ".."
+            },
+            {
+              "ai": "21",
+              "value": "."
+            }
+          ]
+        },
+        {
+          "id": "literal-percent2e-value",
+          "elements": [
+            {
+              "ai": "01",
+              "value": "04912345678904"
+            },
+            {
+              "ai": "10",
+              "value": "%2e"
+            }
+          ],
+          "options": {
+            "baseUrl": "https://example.com"
+          },
+          "expectedUri": "https://example.com/01/04912345678904/10/%252e"
+        },
+        {
+          "id": "safe-base-normalization",
+          "elements": [
+            {
+              "ai": "01",
+              "value": "04912345678904"
+            }
+          ],
+          "options": {
+            "baseUrl": "https://example.com/a/../b"
+          },
+          "expectedUri": "https://example.com/b/01/04912345678904"
+        }
+      ]
+    },
+    "nonFinitePrintGeometry": {
+      "priority": "pathological-input diagnostics correctness",
+      "cases": [
+        {
+          "printDpi": "Number.MIN_VALUE (5e-324)",
+          "expect": "InvalidInputError when print diagnostics are returned"
+        },
+        {
+          "printDpi": 1e-305,
+          "expect": "reject full-symbol Infinity even when module size is finite"
+        },
+        {
+          "printDpi": 1e-304,
+          "version": 1,
+          "expect": "finite accepted"
+        },
+        {
+          "printDpi": 1e-304,
+          "version": 40,
+          "expect": "non-finite rejected"
+        },
+        {
+          "printDpi": 300,
+          "expect": "unchanged normal geometry"
+        },
+        {
+          "printDpi": "Number.MIN_VALUE (5e-324)",
+          "diagnostics": false,
+          "expect": "unused printDpi does not change generated output, including Structured Append"
+        }
+      ]
+    },
+    "inheritedEccKeys": {
+      "priority": "JS-specific malformed-input error contract",
+      "inputs": [
+        "constructor",
+        "toString",
+        "valueOf",
+        "__proto__",
+        "hasOwnProperty"
+      ],
+      "operations": [
+        "generate",
+        "estimate",
+        "generateSegments",
+        "analyzeSegments",
+        "generateStructuredAppend",
+        "generateSegmentsStructuredAppend",
+        "getCapacity"
+      ],
+      "expect": "typed invalid-input error, never inherited object property membership/raw internal TypeError",
+      "portApplicability": "Enums/typed maps may already prevent this; test analogous invalid values without inventing JS property names in typed APIs.",
+      "normalControls": [
+        "L",
+        "M",
+        "Q",
+        "H"
+      ],
+      "compatibility": "JS legacy coercible valid keys (boxed string,array,pure toString object) remain unchanged."
+    }
+  },
+  "publicationPolicy": {
+    "stable": "2.4.0 existing artifacts untouched",
+    "main": "3.0.0-rc.2 existing artifacts untouched; local candidate requires a distinct authorized release decision before publication",
+    "lab": "72ad78c979327e3e261526ea3c0a164efa4ab390 stable pin and RC technical/observation separation unchanged",
+    "vba": "Saved VBA candidate actual Excel verification and publication remain on hold"
+  }
+}

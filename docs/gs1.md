@@ -81,3 +81,7 @@ cross-runtime corpus は受理・拒否、値、診断 code / reason / AI / offs
 ### Validation Context の適用先
 
 `GS1ValidationOptions.Context` の `digital-link` による primary-key 関係検査は `GS1ValidateElements` で適用します。`GS1ValidateElementString` は owned JavaScript baseline と同じく element-string の構文・値検査を行い、Context による Digital Link 関係検査は適用しません。URL の検査には `GS1ValidateDigitalLink` を使ってください。
+
+## URL serialization compatibility (2026-10-05)
+
+base URL の空 fragment `#` は作成時に保持します。正規化は従来どおり空 fragment を除去し、非空 fragment は拒否します。 限定した URL 出力互換性の拡張であり、通常の QR 符号化・公開 API・runtime dependency は変更しません。既存の dot 値・NUL・IDNA・診断方針を保持します。[固定 corpus と再現手順](../tools/url-serialization/README.md) を参照してください。

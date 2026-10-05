@@ -1,0 +1,19 @@
+{
+  "referenceRepository": "https://github.com/SpecQR/SpecQR",
+  "referenceCommit": "16efc6c0a8e397c9df3d051d20fce6c1eebdfad7",
+  "baselineCommit": "5031f16b95bd46da7eb50d9f02bdc54dd63c646e",
+  "requestSha256": "672a8d0a438e81256219eaea755747c5b44b9314201731c9d7a8e15123428ab9",
+  "nativeOutputSha256": "f72218705573186999ed71e5476c94385695a08d26c4334cf80bb8eea91180ba",
+  "ts1411OutputSha256": "c6dfdc272f9daf1e289ecfde2f27b1c5752fb0647baab571ee80eeeb254b0988",
+  "sha256": {
+    "approved-restorations80.json": "08f1e5ae4b2d49163e85ed95507090f4b409924e4ce1d553f092a4efa5ddcd3c",
+    "contracts.json.gz": "bb24e781470e54e74530a7e0c1ce1501ae11b2dde9a5986db5a907cd21471767",
+    "cross-port-regressions.json": "0b32b6d0d345e954533bbe29a43537c4a055f31898a158c08a2d2d631b7eda59",
+    "current-ts-gs1-1411.json.gz": "c2e0678be740d935306353ae15c0e5f80a444a641351b070f5126be81057021b",
+    "current-ts-gs1-shared49.json": "a7d568cb2a63ff28695b132c1028c8d7ca898cca0e813316ff6b454fecc447e1",
+    "expected-contract-vectors.json": "d08eb74343ac0fd17b2840c5c34e651569b3e90deaf924296faf228514486dff",
+    "gs1-upstream.json": "e12c7a2e6ed9ae26cc9865caab9e6e0a7dbeb62438a903a3f5611d6420c865e2",
+    "published-source.json": "4b0fa434f21b08cba8e5fdaf1e8b2801c1c5bb0f8f58f046b149fcb6a85a6000",
+    "fnc1-native-reference.json": "3a7512843294e8031095232a6fba22f53d3b4af0e780b342f52661846b1817e3"
+  }
+}

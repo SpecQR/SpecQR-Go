@@ -1,0 +1,4178 @@
+{
+  "basis": "SpecQR baseline 15ad15e5c770ea0e39072f8f88b2733018f02ffd. Expected bounded high-level correction: unsafe selected alpha text % -> %%; auto compares escaped original versus whole byte by bits, then segment count, then original. Generation capacity checked at requested ECC, no boost.",
+  "vectors": [
+    {
+      "id": "first-basic-auto-true",
+      "input": "10ABC%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "313041424325444546",
+      "expectedInputBytes": 9,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%DEF"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedDataBitLength": 72,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 68,
+      "byteDataBits": 84,
+      "preflightLowerBoundBits": 46,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 72,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-basic-auto-false",
+      "input": "10ABC%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "313041424325444546",
+      "expectedInputBytes": 9,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%DEF"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedDataBitLength": 72,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 68,
+      "byteDataBits": 84,
+      "preflightLowerBoundBits": 46,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 72,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-basic-alphanumeric-true",
+      "input": "10ABC%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "313041424325444546",
+      "expectedInputBytes": 9,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%DEF"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedDataBitLength": 72,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 68,
+      "byteDataBits": 84,
+      "preflightLowerBoundBits": 67,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 72,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-basic-alphanumeric-false",
+      "input": "10ABC%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "313041424325444546",
+      "expectedInputBytes": 9,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%DEF"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedDataBitLength": 72,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 68,
+      "byteDataBits": 84,
+      "preflightLowerBoundBits": 67,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 72,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-basic-byte-true",
+      "input": "10ABC%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "313041424325444546",
+      "expectedInputBytes": 9,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%DEF"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%DEF"
+        }
+      ],
+      "expectedDataBitLength": 88,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 88,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 88,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-basic-byte-false",
+      "input": "10ABC%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "313041424325444546",
+      "expectedInputBytes": 9,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%DEF"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%DEF"
+        }
+      ],
+      "expectedDataBitLength": 88,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 88,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 88,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-repeated-auto-true",
+      "input": "10ABC%%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "31304142432525444546",
+      "expectedInputBytes": 10,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%%%DEF"
+        }
+      ],
+      "expectedDataBitLength": 83,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 79,
+      "byteDataBits": 92,
+      "preflightLowerBoundBits": 50,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%%%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 83,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-repeated-auto-false",
+      "input": "10ABC%%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "31304142432525444546",
+      "expectedInputBytes": 10,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%%%DEF"
+        }
+      ],
+      "expectedDataBitLength": 83,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 79,
+      "byteDataBits": 92,
+      "preflightLowerBoundBits": 50,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%%%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 83,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-repeated-alphanumeric-true",
+      "input": "10ABC%%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "31304142432525444546",
+      "expectedInputBytes": 10,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%%%DEF"
+        }
+      ],
+      "expectedDataBitLength": 83,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 79,
+      "byteDataBits": 92,
+      "preflightLowerBoundBits": 72,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%%%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 83,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-repeated-alphanumeric-false",
+      "input": "10ABC%%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "31304142432525444546",
+      "expectedInputBytes": 10,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%%%DEF"
+        }
+      ],
+      "expectedDataBitLength": 83,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 79,
+      "byteDataBits": 92,
+      "preflightLowerBoundBits": 72,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%%%%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 83,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-repeated-byte-true",
+      "input": "10ABC%%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "31304142432525444546",
+      "expectedInputBytes": 10,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedDataBitLength": 96,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 96,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 96,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-repeated-byte-false",
+      "input": "10ABC%%DEF",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "31304142432525444546",
+      "expectedInputBytes": 10,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedDataBitLength": 96,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 96,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%%DEF"
+        }
+      ],
+      "expectedEstimateDataBitLength": 96,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-separator-auto-true",
+      "input": "10ABC%\u001d21ABC",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "3130414243251d3231414243",
+      "expectedInputBytes": 12,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10ABC%"
+        },
+        {
+          "mode": "byte",
+          "text": "\u001d21ABC"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "byte-fallback",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "expectedDataBitLength": 112,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 112,
+      "byteDataBits": 108,
+      "preflightLowerBoundBits": 56,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "expectedEstimateDataBitLength": 112,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-separator-auto-false",
+      "input": "10ABC%\u001d21ABC",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "3130414243251d3231414243",
+      "expectedInputBytes": 12,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "expectedDataBitLength": 112,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 56,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "expectedEstimateDataBitLength": 112,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-separator-alphanumeric-true",
+      "input": "10ABC%\u001d21ABC",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedError": "InvalidModeError"
+    },
+    {
+      "id": "first-separator-alphanumeric-false",
+      "input": "10ABC%\u001d21ABC",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedError": "InvalidModeError"
+    },
+    {
+      "id": "first-separator-byte-true",
+      "input": "10ABC%\u001d21ABC",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "3130414243251d3231414243",
+      "expectedInputBytes": 12,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "expectedDataBitLength": 112,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 112,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "expectedEstimateDataBitLength": 112,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-separator-byte-false",
+      "input": "10ABC%\u001d21ABC",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "3130414243251d3231414243",
+      "expectedInputBytes": 12,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "expectedDataBitLength": 112,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 112,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10ABC%\u001d21ABC"
+        }
+      ],
+      "expectedEstimateDataBitLength": 112,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-safe-byte-auto-true",
+      "input": "10a%a",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "3130612561",
+      "expectedInputBytes": 5,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "expectedDataBitLength": 56,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 33,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "expectedEstimateDataBitLength": 56,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-safe-byte-auto-false",
+      "input": "10a%a",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "3130612561",
+      "expectedInputBytes": 5,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "expectedDataBitLength": 56,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 33,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "expectedEstimateDataBitLength": 56,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-safe-byte-alphanumeric-true",
+      "input": "10a%a",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedError": "InvalidModeError"
+    },
+    {
+      "id": "first-safe-byte-alphanumeric-false",
+      "input": "10a%a",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedError": "InvalidModeError"
+    },
+    {
+      "id": "first-safe-byte-byte-true",
+      "input": "10a%a",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "3130612561",
+      "expectedInputBytes": 5,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "expectedDataBitLength": 56,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 56,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "expectedEstimateDataBitLength": 56,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-safe-byte-byte-false",
+      "input": "10a%a",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "3130612561",
+      "expectedInputBytes": 5,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "expectedDataBitLength": 56,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 56,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10a%a"
+        }
+      ],
+      "expectedEstimateDataBitLength": 56,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-capacity-auto-true",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedDataBitLength": 144,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 140,
+      "byteDataBits": 188,
+      "preflightLowerBoundBits": 90,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 144,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-capacity-auto-false",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedDataBitLength": 144,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 140,
+      "byteDataBits": 188,
+      "preflightLowerBoundBits": 90,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 144,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-capacity-alphanumeric-true",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedDataBitLength": 144,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 140,
+      "byteDataBits": 188,
+      "preflightLowerBoundBits": 138,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 144,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-capacity-alphanumeric-false",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedDataBitLength": 144,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 140,
+      "byteDataBits": 188,
+      "preflightLowerBoundBits": 138,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 144,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "first-capacity-byte-true",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "expectedDataBitLength": 192,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 192,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 192,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "first-capacity-byte-false",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "gs1": true,
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "expectedDataBitLength": 192,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 192,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 192,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-capacity-auto-true",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedDataBitLength": 152,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 140,
+      "byteDataBits": 188,
+      "preflightLowerBoundBits": 98,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 152,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-capacity-auto-false",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedDataBitLength": 152,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 140,
+      "byteDataBits": 188,
+      "preflightLowerBoundBits": 98,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 152,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-capacity-alphanumeric-true",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedDataBitLength": 152,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 140,
+      "byteDataBits": 188,
+      "preflightLowerBoundBits": 146,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 152,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-capacity-alphanumeric-false",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedDataBitLength": 152,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 140,
+      "byteDataBits": 188,
+      "preflightLowerBoundBits": 146,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "10AAAAAAAAAAAAAAAAAAA%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 152,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-capacity-byte-true",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "expectedDataBitLength": 200,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 200,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 200,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-capacity-byte-false",
+      "input": "10AAAAAAAAAAAAAAAAAAA%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "31304141414141414141414141414141414141414125",
+      "expectedInputBytes": 22,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "expectedDataBitLength": 200,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 200,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "10AAAAAAAAAAAAAAAAAAA%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 200,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-single-auto-true",
+      "input": "%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "25",
+      "expectedInputBytes": 1,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "byte-fallback",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%"
+        }
+      ],
+      "expectedDataBitLength": 32,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 24,
+      "byteDataBits": 20,
+      "preflightLowerBoundBits": 28,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 32,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-single-auto-false",
+      "input": "%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "25",
+      "expectedInputBytes": 1,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "byte-fallback",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%"
+        }
+      ],
+      "expectedDataBitLength": 32,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 24,
+      "byteDataBits": 20,
+      "preflightLowerBoundBits": 28,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 32,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-single-alphanumeric-true",
+      "input": "%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "25",
+      "expectedInputBytes": 1,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%"
+        }
+      ],
+      "expectedDataBitLength": 36,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 24,
+      "byteDataBits": 20,
+      "preflightLowerBoundBits": 31,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 36,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-single-alphanumeric-false",
+      "input": "%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "25",
+      "expectedInputBytes": 1,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%"
+        }
+      ],
+      "expectedDataBitLength": 36,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 24,
+      "byteDataBits": 20,
+      "preflightLowerBoundBits": 31,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 36,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-single-byte-true",
+      "input": "%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "25",
+      "expectedInputBytes": 1,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%"
+        }
+      ],
+      "expectedDataBitLength": 32,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 32,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 32,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-single-byte-false",
+      "input": "%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "25",
+      "expectedInputBytes": 1,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%"
+        }
+      ],
+      "expectedDataBitLength": 32,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 32,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 32,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-repeat-auto-true",
+      "input": "%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "2525",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "byte-fallback",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%"
+        }
+      ],
+      "expectedDataBitLength": 40,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 35,
+      "byteDataBits": 28,
+      "preflightLowerBoundBits": 31,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 40,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-repeat-auto-false",
+      "input": "%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "2525",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "byte-fallback",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%"
+        }
+      ],
+      "expectedDataBitLength": 40,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 35,
+      "byteDataBits": 28,
+      "preflightLowerBoundBits": 31,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 40,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-repeat-alphanumeric-true",
+      "input": "%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "2525",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%"
+        }
+      ],
+      "expectedDataBitLength": 47,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 35,
+      "byteDataBits": 28,
+      "preflightLowerBoundBits": 36,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 47,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-repeat-alphanumeric-false",
+      "input": "%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "2525",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%"
+        }
+      ],
+      "expectedDataBitLength": 47,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 35,
+      "byteDataBits": 28,
+      "preflightLowerBoundBits": 36,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 47,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-repeat-byte-true",
+      "input": "%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "2525",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "%%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%"
+        }
+      ],
+      "expectedDataBitLength": 40,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 40,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 40,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-repeat-byte-false",
+      "input": "%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "2525",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "%%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%"
+        }
+      ],
+      "expectedDataBitLength": 40,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 40,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 40,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-density-auto-true",
+      "input": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "252525252525252525252525252525252525252525252525252525252525",
+      "expectedInputBytes": 30,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "byte-fallback",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedDataBitLength": 264,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": 343,
+      "byteDataBits": 252,
+      "preflightLowerBoundBits": 124,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 264,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-density-auto-false",
+      "input": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "252525252525252525252525252525252525252525252525252525252525",
+      "expectedInputBytes": 30,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "byte-fallback",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedDataBitLength": 264,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": 343,
+      "byteDataBits": 252,
+      "preflightLowerBoundBits": 124,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 264,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-density-alphanumeric-true",
+      "input": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "252525252525252525252525252525252525252525252525252525252525",
+      "expectedInputBytes": 30,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedDataBitLength": 355,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": 343,
+      "byteDataBits": 252,
+      "preflightLowerBoundBits": 190,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 355,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-density-alphanumeric-false",
+      "input": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "252525252525252525252525252525252525252525252525252525252525",
+      "expectedInputBytes": 30,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedDataBitLength": 355,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": 343,
+      "byteDataBits": 252,
+      "preflightLowerBoundBits": 190,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 355,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-density-byte-true",
+      "input": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "252525252525252525252525252525252525252525252525252525252525",
+      "expectedInputBytes": 30,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedDataBitLength": 264,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 264,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 264,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-density-byte-false",
+      "input": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "252525252525252525252525252525252525252525252525252525252525",
+      "expectedInputBytes": 30,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedDataBitLength": 264,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 264,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 264,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-tie-one-segment-auto-true",
+      "input": "AA%%A",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4141252541",
+      "expectedInputBytes": 5,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%A"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%%%A"
+        }
+      ],
+      "expectedDataBitLength": 64,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 52,
+      "byteDataBits": 52,
+      "preflightLowerBoundBits": 41,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%%%A"
+        }
+      ],
+      "expectedEstimateDataBitLength": 64,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-tie-one-segment-auto-false",
+      "input": "AA%%A",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4141252541",
+      "expectedInputBytes": 5,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%A"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%%%A"
+        }
+      ],
+      "expectedDataBitLength": 64,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 52,
+      "byteDataBits": 52,
+      "preflightLowerBoundBits": 41,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%%%A"
+        }
+      ],
+      "expectedEstimateDataBitLength": 64,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-tie-one-segment-alphanumeric-true",
+      "input": "AA%%A",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4141252541",
+      "expectedInputBytes": 5,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%A"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%%%A"
+        }
+      ],
+      "expectedDataBitLength": 64,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 52,
+      "byteDataBits": 52,
+      "preflightLowerBoundBits": 53,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%%%A"
+        }
+      ],
+      "expectedEstimateDataBitLength": 64,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-tie-one-segment-alphanumeric-false",
+      "input": "AA%%A",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4141252541",
+      "expectedInputBytes": 5,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%A"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%%%A"
+        }
+      ],
+      "expectedDataBitLength": 64,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": 52,
+      "byteDataBits": 52,
+      "preflightLowerBoundBits": 53,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AA%%%%A"
+        }
+      ],
+      "expectedEstimateDataBitLength": 64,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-tie-one-segment-byte-true",
+      "input": "AA%%A",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4141252541",
+      "expectedInputBytes": 5,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "AA%%A"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AA%%A"
+        }
+      ],
+      "expectedDataBitLength": 64,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 64,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AA%%A"
+        }
+      ],
+      "expectedEstimateDataBitLength": 64,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-tie-one-segment-byte-false",
+      "input": "AA%%A",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4141252541",
+      "expectedInputBytes": 5,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "AA%%A"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AA%%A"
+        }
+      ],
+      "expectedDataBitLength": 64,
+      "capacityBits": 152,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 64,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AA%%A"
+        }
+      ],
+      "expectedEstimateDataBitLength": 64,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version9-auto-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 9,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "byte-fallback",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedDataBitLength": 40,
+      "capacityBits": 1856,
+      "expectedFits": true,
+      "escapedDataBits": 30,
+      "byteDataBits": 28,
+      "preflightLowerBoundBits": 31,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 40,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version9-auto-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 9,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "byte-fallback",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedDataBitLength": 40,
+      "capacityBits": 1856,
+      "expectedFits": true,
+      "escapedDataBits": 30,
+      "byteDataBits": 28,
+      "preflightLowerBoundBits": 31,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 40,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version9-alphanumeric-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 9,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 42,
+      "capacityBits": 1856,
+      "expectedFits": true,
+      "escapedDataBits": 30,
+      "byteDataBits": 28,
+      "preflightLowerBoundBits": 36,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 42,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version9-alphanumeric-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 9,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 42,
+      "capacityBits": 1856,
+      "expectedFits": true,
+      "escapedDataBits": 30,
+      "byteDataBits": 28,
+      "preflightLowerBoundBits": 36,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 42,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version9-byte-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 9,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedDataBitLength": 40,
+      "capacityBits": 1856,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 40,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 40,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version9-byte-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 9,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedDataBitLength": 40,
+      "capacityBits": 1856,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 40,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 40,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version10-auto-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 10,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 44,
+      "capacityBits": 2192,
+      "expectedFits": true,
+      "escapedDataBits": 32,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 33,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 44,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version10-auto-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 10,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 44,
+      "capacityBits": 2192,
+      "expectedFits": true,
+      "escapedDataBits": 32,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 33,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 44,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version10-alphanumeric-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 10,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 44,
+      "capacityBits": 2192,
+      "expectedFits": true,
+      "escapedDataBits": 32,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 38,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 44,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version10-alphanumeric-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 10,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 44,
+      "capacityBits": 2192,
+      "expectedFits": true,
+      "escapedDataBits": 32,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 38,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 44,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version10-byte-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 10,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedDataBitLength": 48,
+      "capacityBits": 2192,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 48,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 48,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version10-byte-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 10,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedDataBitLength": 48,
+      "capacityBits": 2192,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 48,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 48,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version26-auto-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 26,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 44,
+      "capacityBits": 10960,
+      "expectedFits": true,
+      "escapedDataBits": 32,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 33,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 44,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version26-auto-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 26,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 44,
+      "capacityBits": 10960,
+      "expectedFits": true,
+      "escapedDataBits": 32,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 33,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 44,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version26-alphanumeric-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 26,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 44,
+      "capacityBits": 10960,
+      "expectedFits": true,
+      "escapedDataBits": 32,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 38,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 44,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version26-alphanumeric-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 26,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 44,
+      "capacityBits": 10960,
+      "expectedFits": true,
+      "escapedDataBits": 32,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 38,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 44,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version26-byte-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 26,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedDataBitLength": 48,
+      "capacityBits": 10960,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 48,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 48,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version26-byte-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 26,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedDataBitLength": 48,
+      "capacityBits": 10960,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 48,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 48,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version27-auto-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 27,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 46,
+      "capacityBits": 11744,
+      "expectedFits": true,
+      "escapedDataBits": 34,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 35,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 46,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version27-auto-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 27,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 46,
+      "capacityBits": 11744,
+      "expectedFits": true,
+      "escapedDataBits": 34,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 35,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 46,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version27-alphanumeric-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 27,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 46,
+      "capacityBits": 11744,
+      "expectedFits": true,
+      "escapedDataBits": 34,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 40,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 46,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version27-alphanumeric-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 27,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedDataBitLength": 46,
+      "capacityBits": 11744,
+      "expectedFits": true,
+      "escapedDataBits": 34,
+      "byteDataBits": 36,
+      "preflightLowerBoundBits": 40,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "A%%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 46,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version27-byte-true",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 27,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedDataBitLength": 48,
+      "capacityBits": 11744,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 48,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 48,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-version27-byte-false",
+      "input": "A%",
+      "options": {
+        "fnc1Second": "37",
+        "version": 27,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4125",
+      "expectedInputBytes": 2,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedDataBitLength": 48,
+      "capacityBits": 11744,
+      "expectedFits": true,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 48,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "A%"
+        }
+      ],
+      "expectedEstimateDataBitLength": 48,
+      "expectedEstimateOk": true,
+      "expectedGenerateError": null
+    },
+    {
+      "id": "second-mixed-auto-true",
+      "input": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4141414141414141414141414141414141414141256161616161616161616161616161616161616161",
+      "expectedInputBytes": 41,
+      "originalSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AAAAAAAAAAAAAAAAAAAA%"
+        },
+        {
+          "mode": "byte",
+          "text": "aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "alphanumeric",
+          "text": "AAAAAAAAAAAAAAAAAAAA%%"
+        },
+        {
+          "mode": "byte",
+          "text": "aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "expectedDataBitLength": 318,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": 306,
+      "byteDataBits": 340,
+      "preflightLowerBoundBits": 161,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "expectedEstimateDataBitLength": 352,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-mixed-auto-false",
+      "input": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4141414141414141414141414141414141414141256161616161616161616161616161616161616161",
+      "expectedInputBytes": 41,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "expectedDataBitLength": 352,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 161,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "expectedEstimateDataBitLength": 352,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-mixed-alphanumeric-true",
+      "input": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedError": "InvalidModeError"
+    },
+    {
+      "id": "second-mixed-alphanumeric-false",
+      "input": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedError": "InvalidModeError"
+    },
+    {
+      "id": "second-mixed-byte-true",
+      "input": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "4141414141414141414141414141414141414141256161616161616161616161616161616161616161",
+      "expectedInputBytes": 41,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "expectedDataBitLength": 352,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 352,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "expectedEstimateDataBitLength": 352,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-mixed-byte-false",
+      "input": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "4141414141414141414141414141414141414141256161616161616161616161616161616161616161",
+      "expectedInputBytes": 41,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "expectedDataBitLength": 352,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 352,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "AAAAAAAAAAAAAAAAAAAA%aaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "expectedEstimateDataBitLength": 352,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-mixed-kanji-auto-true",
+      "input": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad974125414141414141",
+      "expectedInputBytes": 68,
+      "originalSegments": [
+        {
+          "mode": "kanji",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字"
+        },
+        {
+          "mode": "alphanumeric",
+          "text": "A%AAAAAA"
+        }
+      ],
+      "unsafe": true,
+      "expectedChoice": "escaped-original",
+      "expectedDataSegments": [
+        {
+          "mode": "kanji",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字"
+        },
+        {
+          "mode": "alphanumeric",
+          "text": "A%%AAAAAA"
+        }
+      ],
+      "expectedDataBitLength": 347,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": 335,
+      "byteDataBits": 556,
+      "preflightLowerBoundBits": 118,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "kanji",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字"
+        },
+        {
+          "mode": "alphanumeric",
+          "text": "A%%AAAAAA"
+        }
+      ],
+      "expectedEstimateDataBitLength": 347,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-mixed-kanji-auto-false",
+      "input": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad974125414141414141",
+      "expectedInputBytes": 68,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA"
+        }
+      ],
+      "expectedDataBitLength": 568,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 118,
+      "preflightRejects": false,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA"
+        }
+      ],
+      "expectedEstimateDataBitLength": 568,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-mixed-kanji-alphanumeric-true",
+      "input": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedError": "InvalidModeError"
+    },
+    {
+      "id": "second-mixed-kanji-alphanumeric-false",
+      "input": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedError": "InvalidModeError"
+    },
+    {
+      "id": "second-mixed-kanji-byte-true",
+      "input": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad974125414141414141",
+      "expectedInputBytes": 68,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA"
+        }
+      ],
+      "expectedDataBitLength": 568,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 568,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA"
+        }
+      ],
+      "expectedEstimateDataBitLength": 568,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-mixed-kanji-byte-false",
+      "input": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad97e6bca2e5ad974125414141414141",
+      "expectedInputBytes": 68,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA"
+        }
+      ],
+      "expectedDataBitLength": 568,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 568,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "漢字漢字漢字漢字漢字漢字漢字漢字漢字漢字A%AAAAAA"
+        }
+      ],
+      "expectedEstimateDataBitLength": 568,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-safe-mixed-auto-true",
+      "input": "12345678901234567890123456789012345678901234567890a%a",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "3132333435363738393031323334353637383930313233343536373839303132333435363738393031323334353637383930612561",
+      "expectedInputBytes": 53,
+      "originalSegments": [
+        {
+          "mode": "numeric",
+          "text": "12345678901234567890123456789012345678901234567890"
+        },
+        {
+          "mode": "byte",
+          "text": "a%a"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "numeric",
+          "text": "12345678901234567890123456789012345678901234567890"
+        },
+        {
+          "mode": "byte",
+          "text": "a%a"
+        }
+      ],
+      "expectedDataBitLength": 229,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 201,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "12345678901234567890123456789012345678901234567890a%a"
+        }
+      ],
+      "expectedEstimateDataBitLength": 448,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-safe-mixed-auto-false",
+      "input": "12345678901234567890123456789012345678901234567890a%a",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "auto",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "3132333435363738393031323334353637383930313233343536373839303132333435363738393031323334353637383930612561",
+      "expectedInputBytes": 53,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "12345678901234567890123456789012345678901234567890a%a"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "12345678901234567890123456789012345678901234567890a%a"
+        }
+      ],
+      "expectedDataBitLength": 448,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 201,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "12345678901234567890123456789012345678901234567890a%a"
+        }
+      ],
+      "expectedEstimateDataBitLength": 448,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-safe-mixed-alphanumeric-true",
+      "input": "12345678901234567890123456789012345678901234567890a%a",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": true
+      },
+      "expectedError": "InvalidModeError"
+    },
+    {
+      "id": "second-safe-mixed-alphanumeric-false",
+      "input": "12345678901234567890123456789012345678901234567890a%a",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "alphanumeric",
+        "optimizeSegments": false
+      },
+      "expectedError": "InvalidModeError"
+    },
+    {
+      "id": "second-safe-mixed-byte-true",
+      "input": "12345678901234567890123456789012345678901234567890a%a",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": true
+      },
+      "expectedPayloadUtf8Hex": "3132333435363738393031323334353637383930313233343536373839303132333435363738393031323334353637383930612561",
+      "expectedInputBytes": 53,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "12345678901234567890123456789012345678901234567890a%a"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "12345678901234567890123456789012345678901234567890a%a"
+        }
+      ],
+      "expectedDataBitLength": 448,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 448,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "12345678901234567890123456789012345678901234567890a%a"
+        }
+      ],
+      "expectedEstimateDataBitLength": 448,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    },
+    {
+      "id": "second-safe-mixed-byte-false",
+      "input": "12345678901234567890123456789012345678901234567890a%a",
+      "options": {
+        "fnc1Second": "37",
+        "version": 1,
+        "errorCorrectionLevel": "L",
+        "mode": "byte",
+        "optimizeSegments": false
+      },
+      "expectedPayloadUtf8Hex": "3132333435363738393031323334353637383930313233343536373839303132333435363738393031323334353637383930612561",
+      "expectedInputBytes": 53,
+      "originalSegments": [
+        {
+          "mode": "byte",
+          "text": "12345678901234567890123456789012345678901234567890a%a"
+        }
+      ],
+      "unsafe": false,
+      "expectedChoice": "unchanged",
+      "expectedDataSegments": [
+        {
+          "mode": "byte",
+          "text": "12345678901234567890123456789012345678901234567890a%a"
+        }
+      ],
+      "expectedDataBitLength": 448,
+      "capacityBits": 152,
+      "expectedFits": false,
+      "escapedDataBits": null,
+      "byteDataBits": null,
+      "preflightLowerBoundBits": 448,
+      "preflightRejects": true,
+      "expectedEstimateDataSegments": [
+        {
+          "mode": "byte",
+          "text": "12345678901234567890123456789012345678901234567890a%a"
+        }
+      ],
+      "expectedEstimateDataBitLength": 448,
+      "expectedEstimateOk": false,
+      "expectedGenerateError": "DataTooLongError"
+    }
+  ],
+  "manualVectors": [
+    {
+      "controls": [
+        {
+          "mode": "fnc1"
+        }
+      ],
+      "data": [
+        {
+          "mode": "alphanumeric",
+          "data": "10ABC%DEF"
+        }
+      ],
+      "expectedPayloadUtf8Hex": "31304142431d444546"
+    },
+    {
+      "controls": [
+        {
+          "mode": "fnc1"
+        }
+      ],
+      "data": [
+        {
+          "mode": "alphanumeric",
+          "data": "10ABC%%DEF"
+        }
+      ],
+      "expectedPayloadUtf8Hex": "313041424325444546"
+    },
+    {
+      "controls": [
+        {
+          "mode": "fnc1-second",
+          "applicationIndicator": "37"
+        }
+      ],
+      "data": [
+        {
+          "mode": "alphanumeric",
+          "data": "AA%BB%%CC"
+        }
+      ],
+      "expectedPayloadUtf8Hex": "41411d4242254343"
+    },
+    {
+      "controls": [
+        {
+          "mode": "fnc1-second",
+          "applicationIndicator": "37"
+        }
+      ],
+      "data": [
+        {
+          "mode": "byte",
+          "data": [
+            37,
+            29,
+            37,
+            37
+          ]
+        }
+      ],
+      "expectedPayloadUtf8Hex": "251d2525"
+    }
+  ]
+}
