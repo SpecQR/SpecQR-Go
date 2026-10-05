@@ -130,12 +130,12 @@ jobs:
           path: .baseline/SpecQR
       - name: Install pinned development oracles
         run: npm ci --prefix tools/verification --ignore-scripts
-      - name: Preserve all original FNC1 payload vectors
-        run: python tools/url-serialization/verify_fnc1.py --dependency-dir .tools/zxing-cpp
       - name: Exact current TS URL serialization contracts
         run: python tools/url-serialization/verify.py
       - name: Seven source lanes
         run: python tools/verification/run_all.py --baseline .baseline/SpecQR --node "$NODE_24_19" --node-24-19 "$NODE_24_19" --node-24-21 "$NODE_24_21" --cpp-dependency-dir .tools/zxing-cpp --java-dependency-dir .tools/zxing-java --reports artifacts/source --summary artifacts/source-summary.json
+      - name: Preserve all original FNC1 payload vectors
+        run: python tools/url-serialization/verify_fnc1.py --dependency-dir .tools/zxing-cpp
       - name: Reproducible package and detached source
         run: |
           python tools/verify_package.py --archive artifacts/source.zip --output artifacts/package.json
