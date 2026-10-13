@@ -8,7 +8,7 @@
 
 `QRCode` は `Version()` / `Size()` / `ECC()` / `Mask()` / `Matrix()` / `Module(x,y)` / `DataCodewords()` / `Codewords()` / `ErrorCorrectionCodewords()` / `Segments()` / `Options()` / `Diagnostics()` を提供します。`DataCodewords()` は interleave 前の pad 済みデータ、`Codewords()` は data block と ECC block を interleave した列です。`ErrorCorrectionCodewords()` は最終列の ECC 部分です。座標は 0-based、範囲外は型付きエラーです。
 
-`GetCapacity(version, ecc, mode, controlBits)` は単一 segment の容量です。Auto / 空 mode は mode 固有値を持たない総容量を返します。`Maximum()` / `MaxBytes()` / `MaxCharacters()` は `*int`、該当しない値は nil です。byte の容量は文字数でなく符号化済みバイト数です。controlBits は非負のプラットフォーム int、最大 2^53−1 に制限されます。32-bit では int の範囲がさらに狭くなります。
+`GetCapacity(version, ecc, mode, controlBits)` は単一 segment の容量です。Auto / 空 mode は mode 固有値を持たない総容量を返します。`Maximum()` / `MaxBytes()` / `MaxCharacters()` は `*int`、該当しない値は nil です。byte の容量は文字数でなく符号化済みバイト数です。controlBits は非負のプラットフォーム int、最大 2^53−1 に制限されます。32 bit では int の範囲がさらに狭くなります。
 
 ## Options
 
@@ -20,7 +20,7 @@
 - DisableOptimization: true で混在最適化を無効化
 - BoostECC: version を増やさず収容可能な最大 ECC を選択
 - ECI: nil または 0..999999 の pointer。ECI は raw bytes の意味を宣言し、変換はしない
-- GS1: raw element string を検証し FNC1 第1位置を付加
+- GS1: raw element string を検証し FNC1 第 1 位置を付加
 - FNC1Second: 2 桁数字または ASCII Latin 1 文字の pointer
 - StructuredAppend: 正しい header segment の pointer
 - Render / PrintDPI: 描画と印刷診断。PrintDPI 0 は未指定、正の有限値のみ
