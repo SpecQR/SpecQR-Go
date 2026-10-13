@@ -1,5 +1,7 @@
 # URL serialization compatibility regression
 
+Regression checks for URL serialization and FNC1 contracts against pinned SpecQR references.
+
 固定した SpecQR `16efc6c0a8e397c9df3d051d20fce6c1eebdfad7` の独立 TS 出力を使います。現在の候補出力から期待値を作成しません。元の 1,411 request と全 options、80 positive targets、49 shared operations、39 adversarial probes を保持します。公開版から保持する native residual は入力・完全な出力・公開 commit を固定し、差の件数だけでは合格にしません。元の fixture、102 FNC1 vectors と 4 manual vectors も変更しません。
 
 ```sh

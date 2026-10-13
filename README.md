@@ -4,13 +4,13 @@ A from-scratch, standard-library-only QR Code Model 2 encoder for Go. No externa
 
 ## 概要
 
-SpecQR の Go 版です。最小 Go **1.26.8**、検証対象 Go **1.26.8 / 1.27.1**。両系統は [Go のサポート方針](https://go.dev/doc/devel/release)に基づき選定しています。Windows / Linux / macOS、32-bit Linux を CI の対象にします。ライブラリは標準 Go だけで動作し、CLI も同じ公開 API を使います。
+SpecQR の Go 版です。最小 Go **1.26.8**、検証対象 Go **1.26.8 / 1.27.1**。両系統は [Go のサポート方針](https://go.dev/doc/devel/release)に基づき選定しています。Windows / Linux / macOS、32 bit Linux を CI の対象にします。ライブラリは標準 Go だけで動作し、CLI も同じ公開 API を使います。
 
-**0.1.0-rc.1 相当の初期プレリリース**です。両 Go 版で Linux amd64 と Windows amd64 の native test・race・CLI・package gate が通過しました。macOS arm64 も本体コードが同一の候補で通過し、その後の変更はレビュー済みのテスト期待値修正だけです。Linux 386 は QEMU による通常実行が通過しましたが、標準ライブラリも含めた unoptimized debug の root suite は両版で失敗しています。この初期公開では、32-bit で標準ライブラリ・runtime まで最適化を無効にする構成を既知の制限として開示します。全面的な検証完了や native Linux386 の成功を主張しません。cross-compile やエミュレーションを native pass と表示しません。安定版タグ・リリース・別レジストリへの公開は行っていません。詳細は [検証範囲と既知の制限](docs/verification.md) を参照してください。
+**0.1.0-rc.1 相当の初期プレリリース**です。両 Go 版で Linux amd64 と Windows amd64 の native test・race・CLI・package gate が通過しました。macOS arm64 も本体コードが同一の候補で通過し、その後の変更はレビュー済みのテスト期待値修正だけです。Linux 386 は QEMU による通常実行が通過しましたが、標準ライブラリも含めた unoptimized debug の root suite は両版で失敗しています。この初期公開では、32 bit で標準ライブラリ・runtime まで最適化を無効にする構成を既知の制限として開示します。全面的な検証完了や native Linux386 の成功を主張しません。cross-compile やエミュレーションを native pass と表示しません。安定版タグ・リリース・別レジストリへの公開は行っていません。詳細は [検証範囲と既知の制限](docs/verification.md) を参照してください。
 
 - QR Code Model 2、version 1–40、ECC L/M/Q/H、mask 0–7 と自動選択
 - 数字、英数字、UTF-8、任意のバイト列、漢字モード
-- 最適混在セグメント、明示的セグメント、ECI、FNC1 第1/第2位置
+- 最適混在セグメント、明示的セグメント、ECI、FNC1 第 1/第 2 位置
 - 容量、生成前の計画・見積り、選択理由と読取り上の診断
 - 限定 GS1 AI カタログ、チェックデジット、element string / Digital Link
 - Structured Append の parity、2–16 分割、完全セットの検証・結合
@@ -58,7 +58,7 @@ if plan.OK() {
 }
 ```
 
-`Options{}` は M / 自動 / 最適化 / 4-module quiet zone / scale 8 を選びます。`DefaultOptions()` から変更する形を推奨します。`RenderOptions{}` 全体は既定値ですが、非ゼロの設定では `Scale` は正数が必要です。`Margin: 0` は、既定値から変更するか正の Scale を併記して明示できます。
+`Options{}` は M / 自動 / 最適化 / 4 module quiet zone / scale 8 を選びます。`DefaultOptions()` から変更する形を推奨します。`RenderOptions{}` 全体は既定値ですが、非ゼロの設定では `Scale` は正数が必要です。`Margin: 0` は、既定値から変更するか正の Scale を併記して明示できます。
 
 ## CLI
 

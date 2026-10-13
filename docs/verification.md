@@ -17,7 +17,7 @@
 | Linux 386 の QEMU user-mode 実行、両 Go 版 | normal suites・CLI・example・別module consumer・独立 review/geometry tests は通過。root-package unoptimized debug は両版失敗 |
 | public GitHub CI / fresh public clone / pinned public module consumer | **未実行**。公開前の必要 gate の後に実施 |
 
-Cross-compilation は build portability の証拠です。OS の runtime / filesystem / shell / package 依存動作の証拠ではありません。エミュレーションを native pass と表示しません。Linux386 は公式 Debian QEMU 10.0.13 の user-mode で実際に実行しました。native Linux386 の確認には32-bit実行をサポートする Linux executor が必要です。
+Cross-compilation は build portability の証拠です。OS の runtime / filesystem / shell / package 依存動作の証拠ではありません。エミュレーションを native pass と表示しません。Linux386 は公式 Debian QEMU 10.0.13 の user-mode で実際に実行しました。native Linux386 の確認には 32 bit 実行をサポートする Linux executor が必要です。
 
 現在の集約記録は [platform-status.json](platform-status.json) です。元の `verification-summary.json`、`local-platform-validation.json`、`review-summary.json` の実行時の hash / 結果は履歴として保持します。Go/mod fingerprint は元の `af5539ed5e47abd6d436960fe887f44d9344f884f467efb479f3314777c221ce` から、`api_test.go` だけの修正で `752ed151c2f95eea6836432e12dd4c72c544ef87bcf235c0f4a74909efb13266` になりました。SVG の int64 境界と raster 上限を分けるテスト修正で、本体・依存・tooling の変更はありません。元の Mac native 実行はそのまま本体の証拠として使いますが、新しいテストの期待値まで Mac で再実行したとは表示しません。文書更新による source archive の変更も、過去の archive hash に遡って反映しません。
 
@@ -62,12 +62,12 @@ negative control は実 candidate process の matrix/data/codeword/typed-error/e
 
 ## 資源・所有権・並行性
 
-unit tests とレビューは不正UTF-8 / 任意raw bytes、制御の組合せ、count overflow、資源予算、matrix/bytes/options/diagnostic の deep copy、並行読取りを対象にします。stdlib Go fuzzing は core/segments/API/merge/GS1/URL の各公開入力を別campaignで実行します。有限fuzz/差分検証は完全な規格証明ではありません。
+unit tests とレビューは不正 UTF-8 / 任意 raw bytes、制御の組合せ、count overflow、資源予算、matrix/bytes/options/diagnostic の deep copy、並行読取りを対象にします。stdlib Go fuzzing は core/segments/API/merge/GS1/URL の各公開入力を別 campaign で実行します。有限 fuzz/差分検証は完全な規格証明ではありません。
 
 ## 再現性・依存関係
 
-`tools/verify_package.py` は source ZIP を同一の時刻/順序/権限で2回生成し一致を確認します。archiveを新しいdirectoryへ展開し、tests、CLI install、別Go moduleからのimportを実行します。`-trimpath -buildvcs=false` の同一compilerでbinaryを2回buildして比較します。Go module は1つだけ、go.sum不要、外部module / CGOなしです。
+`tools/verify_package.py` は source ZIP を同一の時刻/順序/権限で 2 回生成し一致を確認します。archive を新しい directory へ展開し、tests、CLI install、別 Go module からの import を実行します。`-trimpath -buildvcs=false` の同一 compiler で binary を 2 回 build して比較します。Go module は 1 つだけ、go.sum 不要、外部 module / CGO なしです。
 
 ## 限界
 
-ISO / GS1 認証、実カメラ、印刷物、全OS/architecture/readerの検証を主張しません。GS1 catalogとUnicode host profileの境界は `gs1.md` を参照してください。PNG圧縮bytesはGo版間で同一と限りません。公開前/native環境の未実行gateは上記のとおり明示して残します。
+ISO / GS1 認証、実カメラ、印刷物、全 OS/architecture/reader の検証を主張しません。GS1 catalog と Unicode host profile の境界は `gs1.md` を参照してください。PNG 圧縮 bytes は Go 版間で同一と限りません。公開前/native 環境の未実行 gate は上記のとおり明示して残します。
